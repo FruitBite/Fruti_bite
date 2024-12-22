@@ -1,38 +1,33 @@
 export const collections = [
   {
     id: 1,
-    plan: "Basic",
-    title: "fruits1",
+    plan: "Premium",
+    title: "Premium Hyd & BLR",
+    image:"/Collections/collection2.jpg"
   },
   {
     id: 2,
     plan: "Basic",
-    title: "fruits2",
+    title: "Basic Hyd & BLR",
+    image:"/Collections/collection2.jpg"
   },
   {
     id: 3,
-    plan: "Premium",
-    title: "fruits3",
+    plan: "Basic",
+    title: "Basic",
+    image:"/Collections/collection1.jpg"
   },
   {
     id: 4,
     plan: "Premium",
-    title: "fruits4",
+    title: "Premium",
+    image:"/Collections/collection4.jpg"
   },
   {
     id: 5,
     plan: "Basic",
-    title: "fruits1",
-  },
-  {
-    id: 6,
-    plan: "Premium",
-    title: "fruits4",
-  },
-  {
-    id: 7,
-    plan: "Premium",
-    title: "fruits4",
+    title: "Mini Hyd & BLR",
+    image:"/Collections/collection3.jpg"
   },
 ];
 

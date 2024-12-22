@@ -14,11 +14,11 @@ const About = () => {
           className="lg:w-[23.688rem] lg:h-[25.875rem]  md:w-[18rem] md:h-[18rem] object-contain hidden md:block"
         />
       </div>
-      <div className="relative bg-PRIMARY w-full md:w-1/2 px-10 flex items-center md:items-start justify-center flex-col gap-5 py-10 md:py-0">
-        <div className="absolute -top-8 md:-top-16 -right-12 bg-transparent w-32 h-20 md:w-56 md:h-32 rounded-t-full border-b-0 border-[.8rem] border-[#ffa800] -rotate-90"></div>
-        <div className="bg-[#ffd365] h-full w-[.15rem] absolute left-[30%]"></div>
-        <div className="bg-[#ffd365] h-full w-[.1rem] absolute left-[55%]"></div>
-        <div className="bg-[#ffd365] h-full w-[.15rem] absolute left-[80%]"></div>
+      <div className="relative bg-PRIMARY w-full md:w-1/2 px-10 flex items-center md:items-start justify-center flex-col gap-5 py-10 md:py-0 ">
+        <div className="hidden md:absolute -top-8 md:-top-16 -right-12 bg-transparent w-32 h-20 md:w-56 md:h-32 rounded-t-full border-b-0 border-[.8rem] border-[#ffa800] -rotate-90"></div>
+        <div className="bg-[#ffd365] h-full w-[.15rem] absolute left-[30%] hidden md:block"></div>
+        <div className="bg-[#ffd365] h-full w-[.1rem] absolute left-[55%] hidden md:block"></div>
+        <div className="bg-[#ffd365] h-full w-[.15rem] absolute left-[80%] hidden md:block"></div>
 
         <div className="z-10">
           <h1 className="text-7xl lg:text-8xl md:text-6xl font-bold text-SECONDARY">
