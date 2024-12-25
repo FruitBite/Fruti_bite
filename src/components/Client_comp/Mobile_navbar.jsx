@@ -19,14 +19,14 @@ const Mobile_navbar = () => {
     <>
       <div className="relative w-full flex justify-between items-center p-4">
         <div className="flex gap-0">
-          <Image
+          {/* <Image
             src="/logo.webp"
             alt="Fruit Bite Logo"
-            width={60}
+            width={50}
             height={50}
             className=" px-2 py-2 "
             priority
-          />
+          /> */}
           <Image
             src="/Logo.png"
             alt="Fruit Bite Logo"

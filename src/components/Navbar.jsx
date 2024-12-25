@@ -16,9 +16,8 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Desktop Navbar */}
       <div
-        className={`sticky top-0 left-0 w-full md:flex justify-between items-center z-50 transition-all ${
+        className={`hidden sticky top-0 left-0 w-full md:flex justify-between items-center z-50 transition-all ${
           isScrolled ? "bg-white shadow-md" : "bg-transparent"
         }`}
       >
@@ -26,7 +25,7 @@ const Navbar = () => {
           <Image
             src="/logo.webp"
             alt="Fruit Bite Logo"
-            width={70}
+            width={60}
             height={50}
             className=" px-2 py-2 hidden md:block"
             priority
@@ -35,7 +34,7 @@ const Navbar = () => {
           <Image
             src="/Logo.png"
             alt="Fruit Bite Logo"
-            width={150}
+            width={200}
             height={50}
             className="px-4 py-4 hidden md:block "
             priority
@@ -64,7 +63,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Navbar */}
-      <div className="lg:hidden w-full flex justify-between items-center z-50 transition-all bg-white">
+      <div className="md:hidden w-full flex justify-between items-center z-50 transition-all bg-white">
         <Mobile_navbar />
       </div>
     </>

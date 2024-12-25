@@ -3,7 +3,6 @@ import About from "@/components/Home/About";
 import Collection from "@/components/Home/Collection";
 import Form from "@/components/Home/Form";
 import Hero from "@/components/Home/Hero";
-import Hero2 from "@/components/Home/Hero2";
 import HighlightsSection from "@/components/Home/HighlightsSection";
 import Howwedo from "@/components/Home/Howwedo";
 import Plans from "@/components/Home/Plans";
@@ -16,11 +15,8 @@ const page = () => {
   return (
     <div className="relative">
       <Navbar />
-      {/* <section id="home">
-        <Hero />
-      </section> */}
       <section id="home">
-        <Hero2/>
+        <Hero />
       </section>
       <section id="about">
         <About />

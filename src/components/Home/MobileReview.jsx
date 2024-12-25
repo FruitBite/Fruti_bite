@@ -6,7 +6,7 @@ import { Autoplay } from "swiper/modules";
 
 SwiperCore.use([Autoplay]);
 
-const Review = () => {
+const MobileReview = () => {
   const testimonials = [
     {
       id: 1,
@@ -47,30 +47,32 @@ const Review = () => {
   ];
 
   return (
-    <Swiper
-      autoplay={{ delay: 5000 }}
-      loop={true}
-      slidesPerView={3}
-      spaceBetween={30}
-      className="w-full md:block hidden"
-    >
-      {testimonials.map((testimonial) => (
-        <SwiperSlide key={testimonial.id}>
-          <div className="bg-white text-black p-6 rounded-lg shadow-lg w-full mx-auto h-72 flex flex-col items-center">
-            <div className="flex flex-col items-center justify-center p-4 w-full h-full border-[.1rem] border-black rounded-lg">
-              <p className="text-sm text-center text-gray-800 italic mb-4">
-                “{testimonial.feedback}”
-              </p>
-              <p className="text-sm font-semibold text-center text-gray-900 mb-2">
-                {testimonial.name}
-              </p>
-            </div>
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
-    
+    <div className="w-full flex justify-center items-center py-6 ">
+      <div className="w-full md:w-3/4 lg:w-2/3 mx-auto">
+        <Swiper
+          autoplay={{ delay: 5000 }}
+          loop={true}
+          slidesPerView={1}
+          className="w-full"
+        >
+          {testimonials.map((testimonial) => (
+            <SwiperSlide key={testimonial.id}>
+              <div className="bg-PRIMARY text-black p-6 rounded-lg shadow-lg w-full mx-auto mb-6">
+                <div className="flex flex-col items-center justify-center p-4 w-full">
+                  <p className="text-sm text-center text-black italic mb-4">
+                    “{testimonial.feedback}”
+                  </p>
+                  <p className="text-sm font-semibold text-center text-gray-900 mb-2">
+                    {testimonial.name}
+                  </p>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </div>
   );
 };
 
-export default Review;
+export default MobileReview;

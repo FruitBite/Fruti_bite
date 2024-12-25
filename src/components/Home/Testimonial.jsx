@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Review from "./Review";
+import MobileReview from "./MobileReview";
 
 const Testimonial = () => {
   return (
@@ -12,8 +13,11 @@ const Testimonial = () => {
           said about their experience.
         </p>
       </div>
-      <div className="w-full px-20">
+      <div className="w-full px-20 hidden md:block">
         <Review />
+      </div>
+      <div className="w-full px-2 md:px-20 block md:hidden">
+        <MobileReview/>
       </div>
     </div>
   );
