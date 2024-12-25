@@ -18,14 +18,25 @@ const Mobile_navbar = () => {
   return (
     <>
       <div className="relative w-full flex justify-between items-center p-4">
-        <Image
-          src="/Logo.png"
-          alt="Fruit Bite Logo"
-          width={150}
-          height={50}
-          className="px-4 py-2"
-          priority
-        />
+        <div className="flex gap-0">
+          <Image
+            src="/logo.webp"
+            alt="Fruit Bite Logo"
+            width={60}
+            height={50}
+            className=" px-2 py-2 "
+            priority
+          />
+          <Image
+            src="/Logo.png"
+            alt="Fruit Bite Logo"
+            width={150}
+            height={50}
+            className="px-4 py-2"
+            priority
+          />
+        </div>
+
         <button onClick={toggleMenu}>
           <Menu size={35} className="mr-5 cursor-pointer" />
         </button>

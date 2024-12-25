@@ -8,9 +8,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        PRIMARY:"#FFBB12",
-        SECONDARY:"#20A401",
-
+        PRIMARY: "#FFBB12",
+        SECONDARY: "#20A401",
+      },
+      animation: {
+        "spin-slow": "spin 8s linear infinite",
       },
     },
   },
