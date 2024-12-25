@@ -1,107 +1,74 @@
-"use client";
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
+import SwiperCore from "swiper";
+import { Autoplay } from "swiper/modules";
 
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-
-const testimonials = [
-  {
-    id: 1,
-    name: "John Doe",
-    text: "This service has changed my life! Highly recommended!",
-  },
-  {
-    id: 2,
-    name: "Jane Smith",
-    text: "I love the quality and care they put into their work. Excellent!",
-  },
-  {
-    id: 3,
-    name: "Mark Johnson",
-    text: "A wonderful experience from start to finish. Will use again!",
-  },
-  {
-    id: 4,
-    name: "Alice Brown",
-    text: "Great quality and fresh fruits delivered on time. Highly satisfied!",
-  },
-  {
-    id: 5,
-    name: "Bob White",
-    text: "The service is incredible and the taste is out of this world!",
-  },
-  {
-    id: 6,
-    name: "Sara Lee",
-    text: "I can't get enough of the products, they are just amazing!",
-  },
-];
+SwiperCore.use([Autoplay]);
 
 const Review = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const testimonialsToShow = testimonials.slice(currentIndex, currentIndex + 3);
-
-  const handleNext = () => {
-    if (currentIndex + 3 < testimonials.length) {
-      setCurrentIndex(currentIndex + 3);
-    } else {
-      setCurrentIndex(0); // Reset to the first set
-    }
-  };
-
-  const handlePrev = () => {
-    if (currentIndex - 3 >= 0) {
-      setCurrentIndex(currentIndex - 3);
-    } else {
-      setCurrentIndex(testimonials.length - 3); // Go to the last set
-    }
-  };
+  const testimonials = [
+    {
+      id: 1,
+      name: "Arjun Sharma",
+      feedback:
+        "The Silver plan is an absolute steal! The fruits are fresh, and the vegetables were locally sourced, which made a huge difference in the taste. The sprouts were a nice touch too. Highly recommended for anyone looking for healthy and affordable options.",
+    },
+    {
+      id: 2,
+      name: "Priya Patel",
+      feedback:
+        "I opted for the Gold plan, and it was worth every penny! The premium selection of fruits and the dry fruits were perfect for my diet. I loved how fresh the vegetables and sprouts were. The packaging was also neat and eco-friendly. Excellent service!",
+    },
+    {
+      id: 3,
+      name: "Rahul Desai",
+      feedback:
+        "Fantastic service! I’ve tried many meal delivery services, but this one stands out. The Gold plan was a great choice, and I felt the quality of everything from the fruits to the vegetables was top-notch. Great value for money!",
+    },
+    {
+      id: 4,
+      name: "Anjali Reddy",
+      feedback:
+        "I’ve been using their meal export service for a month now, and I am very impressed. The Silver plan is perfect for my family, providing a good variety of fresh fruits and veggies. The sprouts are always fresh, and the service is consistently reliable.",
+    },
+    {
+      id: 5,
+      name: "Vikram Singh",
+      feedback:
+        "The Gold plan was an excellent choice! I loved the assortment of dry fruits, and the fruits were always fresh and of high quality. I also appreciate how the items are sourced locally, which makes me feel good about supporting sustainable farming.",
+    },
+    {
+      id: 6,
+      name: "Neha Gupta",
+      feedback:
+        "I ordered the Silver plan last week, and I’m already a repeat customer. The variety of fruits and vegetables is fantastic, and everything tastes so fresh. It's perfect for my health-conscious lifestyle, and I love the convenience of having it delivered to my doorstep.",
+    },
+  ];
 
   return (
-    <div className="relative w-full bg-gray-100 py-10">
-      <div className="container mx-auto px-4">
-        <motion.div
-          className="flex flex-col items-center justify-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
-            initial={{ opacity: 0, x: 50 }}  // Start from right side
-            animate={{ opacity: 1, x: 0 }}   // Slide in
-            exit={{ opacity: 0, x: -50 }}    // Slide out to the left when leaving
-            transition={{ duration: 0.5 }}
-          >
-            {testimonialsToShow.map((testimonial) => (
-              <div
-                key={testimonial.id}
-                className="flex flex-col items-center p-6 bg-PRIMARY shadow-lg rounded-lg"
-              >
-                <p className="text-lg italic">"{testimonial.text}"</p>
-                <p className="font-bold mt-4">{testimonial.name}</p>
-              </div>
-            ))}
-          </motion.div>
-
-          {/* Prev and Next Buttons */}
-          <div className="flex justify-between mt-8 w-full max-w-xs mx-auto">
-            <button
-              onClick={handlePrev}
-              className="bg-PRIMARY text-black py-2 px-6 rounded-full transition-all"
-            >
-              Prev
-            </button>
-            <button
-              onClick={handleNext}
-              className="bg-PRIMARY text-black py-2 px-6 rounded-full transition-all"
-            >
-              Next
-            </button>
+    <Swiper
+      autoplay={{ delay: 5000 }}
+      loop={true}
+      slidesPerView={3}
+      spaceBetween={30}
+      className="w-full"
+    >
+      {testimonials.map((testimonial) => (
+        <SwiperSlide key={testimonial.id}>
+          <div className="bg-white text-black p-6 rounded-lg shadow-lg w-full mx-auto h-72 flex flex-col items-center">
+            <div className="flex flex-col items-center justify-center p-4 w-full h-full border-[.1rem] border-black rounded-lg">
+              <p className="text-sm text-center text-gray-800 italic mb-4">
+                “{testimonial.feedback}”
+              </p>
+              <p className="text-sm font-semibold text-center text-gray-900 mb-2">
+                {testimonial.name}
+              </p>
+            </div>
           </div>
-        </motion.div>
-      </div>
-    </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 };
 

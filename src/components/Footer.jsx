@@ -14,7 +14,6 @@ const Footer = () => {
       transition={{ duration: 1 }}
     >
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left text-black">
-        {/* First Column */}
         <div className="flex flex-col items-center md:items-start">
           <div className="flex items-center space-x-3">
             <Image src="/Logo.png" alt="logo" width={200} height={100} />
@@ -22,10 +21,11 @@ const Footer = () => {
           <p className="mt-2 italic">where you meet a healthier you!</p>
           <p className="mt-4 text-sm leading-relaxed">
             At Fruit Bites, we believe that a healthy start to your day sets the
-            tone for a vibrant life. Our mission is to deliver freshly cut fruits,
-            crunchy nuts, nutritious dry fruits, sprouts, boiled items, and vegetables
-            right to your doorstep. We ensure hygiene and quality at every step to
-            offer you a convenient, delicious, and nutritious breakfast.
+            tone for a vibrant life. Our mission is to deliver freshly cut
+            fruits, crunchy nuts, nutritious dry fruits, sprouts, boiled items,
+            and vegetables right to your doorstep. We ensure hygiene and quality
+            at every step to offer you a convenient, delicious, and nutritious
+            breakfast.
           </p>
           <div className="flex gap-4 mt-4 justify-center md:justify-start">
             <a href="/" className="bg-white p-2 rounded-lg">
@@ -38,14 +38,41 @@ const Footer = () => {
         </div>
 
         {/* Second Column (Pages Links) */}
-        <div className="flex flex-col items-center justify-center md:items-start">
-          <h3 className="text-lg font-semibold mb-4">Pages</h3>
-          <div className="flex flex-col gap-2 font-bold text-base">
-            <a className="hover:pl-4 hover:text-SECONDARY transition-all" href="/">Home</a>
-            <a className="hover:pl-4 hover:text-SECONDARY transition-all" href="#plans">Plans</a>
-            <a className="hover:pl-4 hover:text-SECONDARY transition-all" href="#collections">Collections</a>
-            <a className="hover:pl-4 hover:text-SECONDARY transition-all" href="#about">About</a>
-            <a className="hover:pl-4 hover:text-SECONDARY transition-all" href="#contact">Contact</a>
+        <div className="flex justify-center">
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Pages</h3>
+            <div className="flex flex-col gap-2 font-bold text-base">
+              <a
+                className="hover:pl-4 hover:text-SECONDARY transition-all"
+                href="/"
+              >
+                Home
+              </a>
+              <a
+                className="hover:pl-4 hover:text-SECONDARY transition-all"
+                href="#plans"
+              >
+                Plans
+              </a>
+              <a
+                className="hover:pl-4 hover:text-SECONDARY transition-all"
+                href="#collections"
+              >
+                Collections
+              </a>
+              <a
+                className="hover:pl-4 hover:text-SECONDARY transition-all"
+                href="#about"
+              >
+                About
+              </a>
+              <a
+                className="hover:pl-4 hover:text-SECONDARY transition-all"
+                href="#contact"
+              >
+                Contact
+              </a>
+            </div>
           </div>
         </div>
 
@@ -59,7 +86,10 @@ const Footer = () => {
             Email: <span className="font-bold">fruitbites@gmail.com</span>
           </p>
           <p className="text-sm mt-2">
-            Address: <span className="font-bold">Chikkaap road, Beng District, Karnataka</span>
+            Address:{" "}
+            <span className="font-bold">
+              Chikkaap road, Beng District, Karnataka
+            </span>
           </p>
         </div>
       </div>

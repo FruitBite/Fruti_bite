@@ -14,9 +14,9 @@ const Subscribe = () => {
               type="email"
               name=""
               placeholder="Enter your email"
-              className="border-white border-[.1rem] rounded-lg md:rounded-full bg-white p-2 md:w-96 outline-none"
+              className=" rounded-lg md:rounded-full bg-white p-2 md:w-96 outline-none"
             />
-            <button className="bg-SECONDARY p-2  rounded-lg md:rounded-full font-medium text-white">Subscribe</button>
+            <button className="bg-SECONDARY px-4 py-2  rounded-lg md:rounded-full font-medium text-white">Subscribe</button>
           </form>
         </div>
       </div>
