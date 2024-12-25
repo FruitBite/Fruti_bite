@@ -1,27 +1,9 @@
 "use client";
-"use client"
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState } from "react";
+import Image from "next/image";
+import { ArrowRight, Truck, Clock, Shield } from "lucide-react";
 
-const slides = [
-  {
-    id: 1,
-    title: "MORI",
-    color: "from-green-600 to-orange-400",
-  },
-  {
-    id: 2,
-    title: "BERRY",
-    color: "from-red-500 to-pink-500",
-  },
-  {
-    id: 3,
-    title: "CITRUS",
-    color: "from-orange-400 to-yellow-400",
-  },
-];
-
-const Hero = () => {
+const Hero2 = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -104,4 +86,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Hero2;

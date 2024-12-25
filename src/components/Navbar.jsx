@@ -14,14 +14,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const decorativeLines = !isScrolled && (
-    <>
-      <div className="bg-[#ffd365] h-full w-[0.15rem] absolute left-[30%] z-0"></div>
-      <div className="bg-[#ffd365] h-full w-[0.1rem] absolute left-[55%] z-0"></div>
-      <div className="bg-[#ffd365] h-full w-[0.15rem] absolute left-[80%] z-0"></div>
-    </>
-  );
-
   return (
     <>
       {/* Desktop Navbar */}
@@ -30,27 +22,37 @@ const Navbar = () => {
           isScrolled ? "bg-white shadow-md" : "bg-transparent"
         }`}
       >
-        <Image
-          src="/Logo.png"
-          alt="Fruit Bite Logo"
-          width={150}
-          height={50}
-          className="px-4 py-2 hidden md:block"
-          priority
-        />
+        <div className="flex">
+          <Image
+            src="/logo.webp"
+            alt="Fruit Bite Logo"
+            width={70}
+            height={50}
+            className=" px-2 py-2 hidden md:block"
+            priority
+          />
+
+          <Image
+            src="/Logo.png"
+            alt="Fruit Bite Logo"
+            width={150}
+            height={50}
+            className="px-4 py-4 hidden md:block "
+            priority
+          />
+        </div>
         <div
           className={`${
-            isScrolled ? "bg-white" : "lg:bg-PRIMARY"
+            isScrolled ? "bg-white" : "lg:bg-white"
           } w-1/2 hidden lg:block relative`}
         >
-          {decorativeLines}
           <ul className="flex gap-10 px-5 py-4 relative z-10">
             {["Home", "Plans", "Collections", "About Us", "Contact"].map(
               (item, index) => (
                 <li key={index}>
                   <Link
                     href={`#${item.toLowerCase().replace(" ", "")}`}
-                    className="font-semibold"
+                    className="font-semibold text-[18px]"
                   >
                     {item}
                   </Link>
@@ -60,7 +62,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      
+
       {/* Mobile Navbar */}
       <div className="lg:hidden w-full flex justify-between items-center z-50 transition-all bg-white">
         <Mobile_navbar />
