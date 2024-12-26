@@ -15,7 +15,7 @@ const Collection_bar = () => {
 
   return (
     <div className="w-full flex items-center justify-center flex-col gap-10 h-fit">
-      <div className="flex gap-10">
+      <div className="flex gap-10 flex-wrap items-center justify-center">
         {collection_names.map((name, index) => {
           return (
             <button

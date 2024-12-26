@@ -48,22 +48,10 @@ const Plans = () => {
         animate={mainControls}
         transition={transition}
       >
-        <Image
-          src="/Nuts.png"
-          alt="Nuts"
-          width={500}
-          height={500}
-          className="w-56 absolute -top-16 left-0 md:left-10"
-        />
-
-        {/* <div>
-          hi
-        </div> */}
-        {/* 
         <motion.div
-          className="w-56 absolute -top-10 left-0 md:left-10"
+          className="w-56 absolute -top-16 left-0 md:left-10"
           animate={{
-            y: [0, -10, 0],
+            y: [0, -5, 0],
           }}
           transition={{
             duration: 1.5,
@@ -73,13 +61,42 @@ const Plans = () => {
           }}
         >
           <Image
-            src="/Orange.png"
-            alt="Orange"
+            src="/Nuts.png"
+            alt="Nuts"
             width={500}
-            height={0}
-            className="w-20 bg-white p-2 rounded-full"
+            height={500}
+            className="w-full object-cover"
           />
-        </motion.div> */}
+        </motion.div>
+
+        <motion.div
+          animate={{
+            y: [0, -5, 0],
+          }}
+          transition={{
+            duration: 1.5,
+            delay: 1.1,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className=" hidden md:block absolute bottom-20 left-20 "
+        >
+          <Image src="/vitB1.png" alt="vitB1" width={100} height={100} />
+        </motion.div>
+        <motion.div
+          animate={{
+            y: [0, -5, 0],
+          }}
+          transition={{
+            duration: 1.5,
+            delay: 1.1,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className=" hidden md:block absolute top-36 right-20"
+        >
+          <Image src="/vitB9.png" alt="vitB9" width={100} height={100} />
+        </motion.div>
 
         <div className="py-10 mt-16 md:mt-0">
           <div className="text-white relative">

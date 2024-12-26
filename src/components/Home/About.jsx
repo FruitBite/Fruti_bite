@@ -29,9 +29,9 @@ const About = () => {
             y: [0, -20, 0],
           }}
           transition={{
-            duration: 2, 
-            repeat: Infinity, 
-            ease: "easeInOut", 
+            duration: 2,
+            repeat: Infinity,
+            ease: "easeInOut",
           }}
         >
           <Image
@@ -45,15 +45,9 @@ const About = () => {
       </div>
 
       <div className="relative bg-PRIMARY w-full md:w-1/2 px-10 flex items-center md:items-start justify-center flex-col gap-5 py-10 md:py-0 ">
-        <motion.div
-          className="absolute top-0 h-[20px] bg-white w-full -left-0  md:hidden "
-          initial={{ x: "-100%" }}
-          animate={{ x: "0%" }}
-          transition={{
-            duration: 1.5,
-            ease: "easeInOut",
-          }}
-        ></motion.div>
+        <div className="bg-[#ffd365] h-full w-[.15rem] absolute left-[30%] hidden md:block"></div>
+        <div className="bg-[#ffd365] h-full w-[.1rem] absolute left-[55%] hidden md:block"></div>
+        <div className="bg-[#ffd365] h-full w-[.15rem] absolute left-[80%] hidden md:block"></div>
         <div className="z-10">
           <motion.h1
             className="text-7xl lg:text-8xl md:text-6xl font-bold text-SECONDARY"
@@ -104,7 +98,6 @@ const About = () => {
           <Button text={"View More"} style={"secondary"} link={"#"} />
         </motion.div>
         <motion.div
-          className="absolute -bottom-10 right-0 block md:hidden"
           animate={{
             y: [0, -10, 0],
           }}
@@ -114,33 +107,14 @@ const About = () => {
             repeat: Infinity,
             ease: "easeInOut",
           }}
+          className="w-full justify-end flex"
         >
           <Image
             src="/Orange.png"
             alt="Orange"
             width={500}
             height={0}
-            className="w-20 bg-white p-2 rounded-full"
-          />
-        </motion.div>
-        <motion.div
-          animate={{
-            y: [0, -10, 0],
-          }}
-          transition={{
-            duration: 1.5,
-            delay: 1,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="w-full  justify-end hidden md:flex"
-        >
-          <Image
-            src="/Orange.png"
-            alt="Orange"
-            width={500}
-            height={0}
-            className="w-20 bg-white p-2 rounded-full"
+            className="w-20 bg-white p-2 rounded-full "
           />
         </motion.div>
       </div>

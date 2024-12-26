@@ -137,9 +137,7 @@ const Form = () => {
             <iframe
               className="w-full h-48 rounded-lg"
               src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d7779.771348542994!2d77.64877300000002!3d12.85066!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDUxJzAyLjQiTiA3N8KwMzknMDQuOSJF!5e0!3m2!1sen!2sin!4v1735133907281!5m2!1sen!2sin"
-              allowfullscreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
           <button
@@ -206,26 +204,6 @@ const Form = () => {
         >
           <Image src="/vitA.png" alt="vitMG" width={80} height={100} />
         </motion.div>
-      </div>
-
-      <div className="flex justify-center ">
-        <Image
-          src="/scan.jpeg"
-          alt="Fruit Bite Logo"
-          width={600}
-          height={400}
-          className=" px-2 py-2 hidden md:block"
-          priority
-        />
-
-        <Image
-          src="/scan.jpeg"
-          alt="Fruit Bite Logo"
-          width={300}
-          height={400}
-          className=" px-2 py-2 md:hidden"
-          priority
-        />
       </div>
     </motion.div>
   );

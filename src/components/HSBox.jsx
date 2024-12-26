@@ -7,7 +7,7 @@ const HSBox = ({ icons, title, paragraph, variants, transition, animate }) => {
       variants={variants}
       animate={animate} 
       transition={transition}
-      className="text-center backdrop-blur-lg bg-white/20 rounded-3xl p-6 border border-white/20 flex items-center justify-center flex-col gap-3"
+      className="text-center backdrop-blur-lg bg-white/20 rounded-3xl py-6 px-6 border border-white/20 flex items-center justify-center flex-col gap-3"
     >
       <div className="bg-SECONDARY w-fit rounded-full p-2 text-white">
         {icons}
