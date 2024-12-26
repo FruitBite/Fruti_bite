@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Facebook, Instagram } from "lucide-react";
+import { Facebook, Instagram  } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -81,7 +81,8 @@ const Footer = () => {
           <p className="text-sm mt-2">
             Address:{" "}
             <span className="font-bold">
-            Sy.119, Doddathoguru, Electronics City Phase 1, Electronic City, Bengaluru, Karnataka 560100
+              Sy.119, Doddathoguru, Electronics City Phase 1, Electronic City,
+              Bengaluru, Karnataka 560100{" "}
             </span>
           </p>
         </div>

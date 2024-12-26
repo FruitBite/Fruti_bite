@@ -48,54 +48,39 @@ const Plans = () => {
         animate={mainControls}
         transition={transition}
       >
-        <motion.div
-          animate={{
-            y: [0, -5, 0],
-          }}
-          transition={{
-            duration: 1.5,
-            delay: 1,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className=" hidden md:block absolute top-48 right-10"
-        >
-          <Image src="/vitB9.png" alt="vitB9" width={100} height={100} />
-        </motion.div>
-        <motion.div
-          animate={{
-            y: [0, -5, 0],
-          }}
-          transition={{
-            duration: 1.5,
-            delay: 1,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className=" hidden md:block absolute bottom-20 left-10"
-        >
-          <Image src="/vitB1.png" alt="vitB1" width={100} height={100} />
-        </motion.div>
-        <motion.div
-          animate={{
-            y: [0, -5, 0],
-          }}
-          transition={{
-            duration: 1.5,
-            delay: 1,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
+        <Image
+          src="/Nuts.png"
+          alt="Nuts"
+          width={500}
+          height={500}
           className="w-56 absolute -top-16 left-0 md:left-10"
+        />
+
+        {/* <div>
+          hi
+        </div> */}
+        {/* 
+        <motion.div
+          className="w-56 absolute -top-10 left-0 md:left-10"
+          animate={{
+            y: [0, -10, 0],
+          }}
+          transition={{
+            duration: 1.5,
+            delay: 1,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
         >
           <Image
-            src="/Nuts.png"
-            alt="Nuts"
+            src="/Orange.png"
+            alt="Orange"
             width={500}
-            height={500}
-            className="w-full object-cover"
+            height={0}
+            className="w-20 bg-white p-2 rounded-full"
           />
-        </motion.div>
+        </motion.div> */}
+
         <div className="py-10 mt-16 md:mt-0">
           <div className="text-white relative">
             <Image
@@ -129,11 +114,11 @@ const Plans = () => {
                   delay: 0.2 * index,
                   type: "spring",
                 }}
-                className="w-72 h-96 rounded-lg md:w-96 md:h-96 px-5 bg-white/25 text-black flex justify-center gap-6 flex-col"
+                className="w-72 h-96 rounded-xl md:w-96 md:h-96 px-5 bg-white/25 text-black flex justify-center gap-6 flex-col"
               >
                 <div>
-                  <h1 className="text-3xl font-bold">{item.title}</h1>
-                  <p className="text-sm text-black">{item.value}</p>
+                  <h1 className="text-4xl font-bold">{item.title}</h1>
+                  <p className="text-lg text-black">{item.value}</p>
                 </div>
                 <div>
                   <span className="text-3xl font-bold">₹{item.price}</span>
@@ -142,7 +127,7 @@ const Plans = () => {
                 <ul className="flex flex-col gap-2">
                   {item.items.map((giveitems, index) => {
                     return (
-                      <li className="flex gap-2" key={index}>
+                      <li className="flex gap-2 text-lg" key={index}>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"
@@ -165,7 +150,7 @@ const Plans = () => {
                 </ul>
                 <a
                   href="#contact"
-                  className="bg-SECONDARY/70 hover:bg-SECONDARY text-white p-2 rounded-full text-center font-semibold text-xs"
+                  className="bg-SECONDARY/70 hover:bg-SECONDARY text-white p-2 rounded-full text-center font-semibold text-md"
                 >
                   Get Started
                 </a>

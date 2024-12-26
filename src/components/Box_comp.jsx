@@ -22,6 +22,7 @@ const Box_comp = ({ icons, title, paragraph, variants, transition, Containercont
       <div>
         <p className="text-gray-950">{paragraph}</p>
       </div>
+    
     </motion.div>
   );
 };

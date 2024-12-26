@@ -39,7 +39,7 @@ const Howwedo = () => {
       icons: <Truck />,
       title: "Fast Delivery",
       paragraph:
-        "Every day Morning delivery before 9 AM. All days Stay Healthy with PhalBites.",
+        "Every day Morning delivery before 9 AM. All days Stay Healthy with Fruit Bite.",
     },
     {
       icons: <Box />,

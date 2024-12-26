@@ -22,7 +22,7 @@ const Mobile_navbar = () => {
           {/* <Image
             src="/logo.webp"
             alt="Fruit Bite Logo"
-            width={50}
+            width={105}
             height={50}
             className=" px-2 py-2 "
             priority
@@ -30,7 +30,7 @@ const Mobile_navbar = () => {
           <Image
             src="/Logo.png"
             alt="Fruit Bite Logo"
-            width={150}
+            width={250}
             height={50}
             className="px-4 py-2"
             priority

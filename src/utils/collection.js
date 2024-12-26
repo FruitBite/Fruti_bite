@@ -33,3 +33,6 @@ export const collections = [
 
 
 export const collection_names= ["ALL","Fruits","Veggies","Sprouts"]
+
+
+
