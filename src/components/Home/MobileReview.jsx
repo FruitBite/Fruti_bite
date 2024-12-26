@@ -4,9 +4,9 @@ import "swiper/swiper-bundle.css";
 import SwiperCore from "swiper";
 import { Autoplay } from "swiper/modules";
 
-SwiperCore.use([Autoplay]);
 
 const MobileReview = () => {
+  SwiperCore.use([Autoplay]);
   const testimonials = [
     {
       id: 1,
@@ -24,13 +24,13 @@ const MobileReview = () => {
       id: 3,
       name: "Rahul Desai",
       feedback:
-        "Fantastic service! I’ve tried many meal delivery services, but this one stands out. The Gold plan was a great choice, and I felt the quality of everything from the fruits to the vegetables was top-notch. Great value for money!",
+        "Fantastic service! I&aposve tried many meal delivery services, but this one stands out. The Gold plan was a great choice, and I felt the quality of everything from the fruits to the vegetables was top-notch. Great value for money!",
     },
     {
       id: 4,
       name: "Anjali Reddy",
       feedback:
-        "I’ve been using their meal export service for a month now, and I am very impressed. The Silver plan is perfect for my family, providing a good variety of fresh fruits and veggies. The sprouts are always fresh, and the service is consistently reliable.",
+        "I&aposve been using their meal export service for a month now, and I am very impressed. The Silver plan is perfect for my family, providing a good variety of fresh fruits and veggies. The sprouts are always fresh, and the service is consistently reliable.",
     },
     {
       id: 5,
@@ -42,7 +42,7 @@ const MobileReview = () => {
       id: 6,
       name: "Neha Gupta",
       feedback:
-        "I ordered the Silver plan last week, and I’m already a repeat customer. The variety of fruits and vegetables is fantastic, and everything tastes so fresh. It's perfect for my health-conscious lifestyle, and I love the convenience of having it delivered to my doorstep.",
+        "I ordered the Silver plan last week, and I&aposm already a repeat customer. The variety of fruits and vegetables is fantastic, and everything tastes so fresh. It's perfect for my health-conscious lifestyle, and I love the convenience of having it delivered to my doorstep.",
     },
   ];
 

@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Facebook, Instagram } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -27,14 +28,6 @@ const Footer = () => {
             at every step to offer you a convenient, delicious, and nutritious
             breakfast.
           </p>
-          <div className="flex gap-4 mt-4 justify-center md:justify-start">
-            <a href="/" className="bg-white p-2 rounded-lg">
-              <Instagram size={24} />
-            </a>
-            <a href="/" className="bg-white p-2 rounded-lg">
-              <Facebook size={24} />
-            </a>
-          </div>
         </div>
 
         {/* Second Column (Pages Links) */}
@@ -42,12 +35,12 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Pages</h3>
             <div className="flex flex-col gap-2 font-bold text-base">
-              <a
+              <Link
                 className="hover:pl-4 hover:text-SECONDARY transition-all"
                 href="/"
               >
                 Home
-              </a>
+              </Link>
               <a
                 className="hover:pl-4 hover:text-SECONDARY transition-all"
                 href="#plans"
@@ -83,12 +76,12 @@ const Footer = () => {
             WhatsApp: <span className="font-bold">+91 9945322622</span>
           </p>
           <p className="text-sm mt-2">
-            Email: <span className="font-bold">fruitbites@gmail.com</span>
+            Email: <span className="font-bold">fruitbite2025@gmail.com</span>
           </p>
           <p className="text-sm mt-2">
             Address:{" "}
             <span className="font-bold">
-              Chikkaap road, Beng District, Karnataka
+            Sy.119, Doddathoguru, Electronics City Phase 1, Electronic City, Bengaluru, Karnataka 560100
             </span>
           </p>
         </div>

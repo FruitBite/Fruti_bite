@@ -30,12 +30,12 @@ const Plans = () => {
     stiffness: 146,
     damping: 42,
     mass: 1.7,
-    velocity: 5
-};
+    velocity: 5,
+  };
 
   return (
     <div
-      className="w-full h-fit md:h-screen flex flex-col gap-10 items-center bg-PRIMARY relative pb-20 md:pb-0"
+      className=" w-full h-fit md:h-screen flex flex-col gap-10 items-center bg-PRIMARY relative pb-20 md:pb-0"
       ref={planref}
     >
       <motion.div
@@ -48,13 +48,54 @@ const Plans = () => {
         animate={mainControls}
         transition={transition}
       >
-        <Image
-          src="/Nuts.png"
-          alt="Nuts"
-          width={500}
-          height={500}
+        <motion.div
+          animate={{
+            y: [0, -5, 0],
+          }}
+          transition={{
+            duration: 1.5,
+            delay: 1,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className=" hidden md:block absolute top-48 right-10"
+        >
+          <Image src="/vitB9.png" alt="vitB9" width={100} height={100} />
+        </motion.div>
+        <motion.div
+          animate={{
+            y: [0, -5, 0],
+          }}
+          transition={{
+            duration: 1.5,
+            delay: 1,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className=" hidden md:block absolute bottom-20 left-10"
+        >
+          <Image src="/vitB1.png" alt="vitB1" width={100} height={100} />
+        </motion.div>
+        <motion.div
+          animate={{
+            y: [0, -5, 0],
+          }}
+          transition={{
+            duration: 1.5,
+            delay: 1,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
           className="w-56 absolute -top-16 left-0 md:left-10"
-        />
+        >
+          <Image
+            src="/Nuts.png"
+            alt="Nuts"
+            width={500}
+            height={500}
+            className="w-full object-cover"
+          />
+        </motion.div>
         <div className="py-10 mt-16 md:mt-0">
           <div className="text-white relative">
             <Image
@@ -78,12 +119,16 @@ const Plans = () => {
               <motion.div
                 key={index}
                 variants={{
-                  visible: { opacity: 1, scale: 1,y:0 },  
-                  hidden: { opacity: 0, scale: 0,y:100 },  
+                  visible: { opacity: 1, scale: 1, y: 0 },
+                  hidden: { opacity: 0, scale: 0, y: 100 },
                 }}
                 initial="hidden"
                 animate={planControls}
-                transition={{ duration: 0.5, delay: 0.2*index,  type: "spring", }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.2 * index,
+                  type: "spring",
+                }}
                 className="w-72 h-96 rounded-lg md:w-96 md:h-96 px-5 bg-white/25 text-black flex justify-center gap-6 flex-col"
               >
                 <div>
@@ -91,7 +136,8 @@ const Plans = () => {
                   <p className="text-sm text-black">{item.value}</p>
                 </div>
                 <div>
-                  <span className="text-3xl font-bold">₹{item.price}</span>/month
+                  <span className="text-3xl font-bold">₹{item.price}</span>
+                  /month
                 </div>
                 <ul className="flex flex-col gap-2">
                   {item.items.map((giveitems, index) => {

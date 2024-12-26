@@ -72,7 +72,7 @@ const Howwedo = () => {
           alt="vegetable"
           width={1000}
           height={100}
-          className="w-[65rem]"
+          className="w-[60rem]"
         />
       </motion.div>
 

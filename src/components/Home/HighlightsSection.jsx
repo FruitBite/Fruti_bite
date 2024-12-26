@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef, useEffect } from "react";
 import HSBox from "../HSBox";
-import { Users, Star, Clock, ShieldCheck } from "lucide-react";
+import { HeartPulse, Star, Clock, ShieldCheck } from "lucide-react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import Image from "next/image";
 
@@ -26,7 +26,7 @@ const HighlightsSection = () => {
   }, [isInview, HScontorl, HSconainercontorl]);
 
   const items = [
-    { icons: <Users />, title: "10k+", paragraph: "Happy Customers" },
+    { icons: <HeartPulse />, title: "100%", paragraph: "Healthy" },
     { icons: <Star />, title: "4.9", paragraph: "Average Rating" },
     { icons: <Clock />, title: "Before 9AM", paragraph: "Daily one box" },
     {

@@ -80,7 +80,7 @@ const Form = () => {
         </motion.div>
         <motion.form
           onSubmit={handleSubmit}
-          className="rounded-lg border-[.1rem] border-black p-5 flex flex-col gap-5 md:w-1/2"
+          className="hidden rounded-lg border-[.1rem] border-black p-5  flex-col gap-5 md:w-1/2"
           variants={variants}
           initial="hidden"
           animate={formControls}
@@ -126,9 +126,8 @@ const Form = () => {
             className="border-gray-300 w-full p-2 text-black rounded-lg outline-none focus:ring-2 focus:ring-PRIMARY focus:border-transparent border-[.1rem]"
             aria-label="Select Plan"
             required
-            defaultValue=""
           >
-            <option value="" disabled>
+            <option disabled>
               Select Plan
             </option>
             <option value="Silver">Silver</option>
@@ -138,7 +137,6 @@ const Form = () => {
             <iframe
               className="w-full h-48 rounded-lg"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.737269657026!2d78.47823061451369!3d17.404526220251083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9132452a379b%3A0x60c5685b4d6c62cc!2sGoogle%20Headquarters!5e0!3m2!1sen!2sus!4v1634527059429!5m2!1sen!2sus"
-              allowFullScreen=""
               loading="lazy"
               title="Google Headquarters"
             ></iframe>
@@ -150,7 +148,34 @@ const Form = () => {
             Submit
           </button>
         </motion.form>
-
+        <motion.div
+          variants={variants}
+          initial="hidden"
+          animate={formControls}
+          transition={{ duration: 0.5, delay: 0.6 }}
+        >
+          <Image
+            src="/scanner.jpg"
+            alt="scanner"
+            width={500}
+            height={100}
+            className="rounded-lg w-auto h-auto"
+          />
+          <div className="flex items-center justify-center py-5 gap-3">
+            <a
+              href="tel:9945322622"
+              className="bg-PRIMARY rounded-full px-3 py-2 shadow-md shadow-PRIMARY/10"
+            >
+              Call Us
+            </a>
+            <a
+              href="https://wa.me/9945322622"
+              className="bg-white rounded-full px-3 py-2 shadow-md shadow-black/10"
+            >
+              Lets Chat
+            </a>
+          </div>
+        </motion.div>
         <motion.div
           className="hidden md:block absolute md:top-20 md:right-20 -translate-y-1/2"
           animate={{
@@ -165,7 +190,7 @@ const Form = () => {
         >
           <Image src="/vitA.png" alt="vitMG" width={100} height={100} />
         </motion.div>
-        
+
         <motion.div
           className="block md:hidden absolute -top-10 right-3 -translate-y-1/2"
           animate={{

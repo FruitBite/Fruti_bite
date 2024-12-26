@@ -1,61 +1,168 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef } from "react";
+import Button from "../Button";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { Instagram, MessageCircleMore, X } from "lucide-react";
+import { motion, useInView, useAnimation } from "framer-motion";
 
 const Hero = () => {
-  const [isHovered, setIsHovered] = useState(false);
-
+  const herocontainer = useRef(null);
+  const heroInview = useInView(herocontainer, { once: false });
+  const Herocontrols = useAnimation();
+  const variants = {
+    visible: { opacity: 1 },
+    hidden: { opacity: 0 },
+  };
+  useEffect(() => {
+    Herocontrols.start(heroInview ? "visible" : "hidden");
+  }, [heroInview, Herocontrols]);
   return (
-    <div className="relative w-full min-h-screen bg-gradient-to-b from-white to-PRIMARY overflow-hidden">
-    {/* <div className="relative w-full min-h-screen bg-white overflow-hidden"> */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-orange-100 rounded-full blur-3xl opacity-20 -z-10" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-green-100 rounded-full blur-3xl opacity-20 -z-10" />
-
-      <div className="max-w-7xl mx-auto px-4 py-12 flex flex-col lg:flex-row items-center justify-between gap-12">
-        <div className="flex-1 space-y-8 order-2 lg:order-1">
-          <div className="space-y-4">
-            <h1 className="text-6xl md:text-7xl font-black">
-              <span className="text-SECONDARY block">Healthy Fruits</span>
-              <span className="text-white md:text-PRIMARY block">Every Day Delivery</span>
-            </h1>
-            <p className="text-xl text-black max-w-xl">
-              Experience the future of fruit delivery with our curated boxes of
-              premium, hand-picked fresh fruits delivered right to your
-              doorstep.
-            </p>
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-wrap gap-4">
-            <button
-              className="group flex items-center gap-2 px-8 py-4 bg-SECONDARY text-white rounded-full font-semibold transition-all "
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
+    <motion.div
+      ref={herocontainer}
+      variants={variants}
+      initial="hidden"
+      animate={Herocontrols}
+      className="bg-PRIMARY flex items-center justify-center flex-col md:flex-row relative w-full md:bg-white "
+    >
+      <div className="w-full flex  justify-center h-[90vh] md:w-1/2 flex-col px-10 leading-loose gap-2">
+        <motion.h1
+          className="text-7xl md:text-6xl lg:text-8xl font-bold text-white md:text-PRIMARY"
+          variants={{
+            visible: { opacity: 1, y: 0 },
+            hidden: { opacity: 0, y: 100 },
+          }}
+          initial="hidden"
+          animate={heroInview ? "visible" : "hidden"}
+          transition={{ delay: 0.5, type: "spring" }}
+        >
+          Healthy
+        </motion.h1>
+        <motion.h1
+          className="text-7xl md:text-6xl lg:text-8xl font-bold text-SECONDARY"
+          variants={{
+            visible: { opacity: 1, y: 0 },
+            hidden: { opacity: 0, y: 100 },
+          }}
+          initial="hidden"
+          animate={heroInview ? "visible" : "hidden"}
+          transition={{ delay: 0.6, type: "spring" }}
+        >
+          Habits
+        </motion.h1>
+        <motion.p
+          className="text-xl md:w-2/3 lg:text-3xl"
+          variants={{
+            visible: { opacity: 1, y: 0 },
+            hidden: { opacity: 0, y: 100 },
+          }}
+          initial="hidden"
+          animate={heroInview ? "visible" : "hidden"}
+          transition={{ delay: 0.7, type: "spring" }}
+        >
+          Starts Here
+        </motion.p>
+        <motion.div
+          className="hidden md:block md:mt-5"
+          variants={{
+            visible: { opacity: 1, y: 0 },
+            hidden: { opacity: 0, y: 100 },
+          }}
+          initial="hidden"
+          animate={heroInview ? "visible" : "hidden"}
+          transition={{ delay: 0.6, type: "spring" }}
+        >
+          <Button text={"View Plans"} style={"primary"} link={"#plans"} />
+        </motion.div>
+        <motion.div
+          className="block md:hidden"
+          variants={{
+            visible: { opacity: 1, y: 0 },
+            hidden: { opacity: 0, y: 100 },
+          }}
+          initial="hidden"
+          animate={heroInview ? "visible" : "hidden"}
+          transition={{ delay: 0.8, type: "spring" }}
+        >
+          <Button text={"View Plans"} style={"secondary"} />
+        </motion.div>
+      </div>
+      <div className="hidden md:block  absolute bg-white p-2 rounded-full md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
+        <Image
+          src="/FruitBowl.png"
+          alt="Fruit bowl"
+          width={1000}
+          height={0}
+          className="w-72 md:w-72 lg:w-96 animate-spin-slow"
+        />
+      </div>
+      <div className="hidden  md:block w-1/2 bg-PRIMARY  h-[90vh]">
+        <div className="relative w-full h-full flex  items-center justify-center ">
+          <div className="bg-[#ffd365] h-full w-[.15rem] absolute left-[30%]"></div>
+          <div className="bg-[#ffd365] h-full w-[.1rem] absolute left-[55%]"></div>
+          <div className="bg-[#ffd365] h-full w-[.15rem] absolute left-[80%]"></div>
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 translate-y-8">
+            <motion.h1
+              className="font-bold text-7xl text-[#F4F1E7]/50"
+              style={{ letterSpacing: "3rem" }}
+              variants={{
+                visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 0, y: 100 },
+              }}
+              initial="hidden"
+              animate={heroInview ? "visible" : "hidden"}
+              transition={{ delay: 0.9, type: "spring" }}
             >
-              Start your box
-              <ArrowRight className="transition-transform group-hover:translate-x-1" />
-            </button>
-            <button className="px-8 py-4 border-2 border-SECONDARY text-SECONDARY rounded-full font-semibold transition-all hover:bg-SECONDARY hover:text-white">
-              Learn more
-            </button>
+              FRUITS
+            </motion.h1>
           </div>
-        </div>
-
-        <div className="flex-1 relative order-1 lg:order-2">
-          <div className="animate-spin-slow">
-            <Image
-              src="/hero.png"
-              alt="Fresh Fruits Collection"
-              width={600}
-              height={600}
-              className="object-contain"
-              priority
-            />
+          <div className="flex gap-5 flex-col items-end w-full px-10">
+            <motion.div
+              className="rounded-full bg-white p-2 w-fit"
+              variants={{
+                visible: { opacity: 1, scale: 1 },
+                hidden: { opacity: 0, scale: 0 },
+              }}
+              initial="hidden"
+              animate={heroInview ? "visible" : "hidden"}
+              transition={{ delay: 1, type: "spring" }}
+            >
+              <Instagram />
+            </motion.div>
+            <motion.div
+              className="rounded-full bg-white p-2 w-fit"
+              variants={{
+                visible: { opacity: 1, scale: 1 },
+                hidden: { opacity: 0, scale: 0 },
+              }}
+              initial="hidden"
+              animate={heroInview ? "visible" : "hidden"}
+              transition={{ delay: 1.2, type: "spring" }}
+            >
+              <MessageCircleMore />
+            </motion.div>
+            <motion.div
+              className="rounded-full bg-white p-2 w-fit"
+              variants={{
+                visible: { opacity: 1, scale: 1 },
+                hidden: { opacity: 0, scale: 0 },
+              }}
+              initial="hidden"
+              animate={heroInview ? "visible" : "hidden"}
+              transition={{ delay: 1.3, type: "spring" }}
+            >
+              <X />
+            </motion.div>
           </div>
         </div>
       </div>
-    </div>
+      <Image
+        src="/FruitBowl.png"
+        alt="Fruit bowl"
+        width={1000}
+        height={0}
+        className="w-72 md:w-96 p-1 bg-white rounded-full md:hidden"
+      />
+    </motion.div>
   );
 };
 

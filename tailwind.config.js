@@ -12,7 +12,7 @@ module.exports = {
         SECONDARY: "#20A401",
       },
       animation: {
-        "spin-slow": "spin 8s linear infinite",
+        "spin-slow": "spin 15s linear infinite",
       },
     },
   },
