@@ -28,7 +28,7 @@ const Form = () => {
 
   return (
     <motion.div className="relative w-full py-8" ref={formRef}>
-      <div className="mx-auto px-5 flex items-center flex-col gap-5">
+      <div className="mx-auto px-5 flex items-center flex-col gap-5 ">
         <div>
           <motion.h1
             variants={variants}
@@ -137,10 +137,10 @@ const Form = () => {
           <div className="mt-6">
             <iframe
               className="w-full h-48 rounded-lg"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.737269657026!2d78.47823061451369!3d17.404526220251083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9132452a379b%3A0x60c5685b4d6c62cc!2sGoogle%20Headquarters!5e0!3m2!1sen!2sus!4v1634527059429!5m2!1sen!2sus"
-              allowFullScreen=""
+              src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d7779.771348542994!2d77.64877300000002!3d12.85066!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDUxJzAyLjQiTiA3N8KwMzknMDQuOSJF!5e0!3m2!1sen!2sin!4v1735133907281!5m2!1sen!2sin"
+              allowfullscreen=""
               loading="lazy"
-              title="Google Headquarters"
+              referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
           <button
@@ -165,7 +165,7 @@ const Form = () => {
         >
           <Image src="/vitA.png" alt="vitMG" width={100} height={100} />
         </motion.div>
-        
+
         <motion.div
           className="block md:hidden absolute -top-10 right-3 -translate-y-1/2"
           animate={{
@@ -180,6 +180,26 @@ const Form = () => {
         >
           <Image src="/vitA.png" alt="vitMG" width={80} height={100} />
         </motion.div>
+      </div>
+
+      <div className="flex justify-center ">
+        <Image
+          src="/scan.jpeg"
+          alt="Fruit Bite Logo"
+          width={600}
+          height={400}
+          className=" px-2 py-2 hidden md:block"
+          priority
+        />
+
+        <Image
+          src="/scan.jpeg"
+          alt="Fruit Bite Logo"
+          width={300}
+          height={400}
+          className=" px-2 py-2 md:hidden"
+          priority
+        />
       </div>
     </motion.div>
   );

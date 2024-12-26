@@ -8,15 +8,36 @@ const About = () => {
   return (
     <div className="w-full md:h-[90vh] flex md:flex-row flex-col">
       <div className="w-1/2 bg-white flex items-center justify-center">
-        <Image
-          src="/FruitBasket.png"
-          alt="FruitBowl"
-          width={1000}
-          height={1000}
-          className="lg:w-96 lg:h-96  md:w-[18rem] md:h-[18rem] object-contain hidden md:block"
-        />
+        <motion.div
+          animate={{
+            y: [0, -20, 0],
+          }}
+          transition={{
+            duration: 2, 
+            repeat: Infinity, 
+            ease: "easeInOut", 
+          }}
+        >
+          <Image
+            src="/FruitBasket.png"
+            alt="FruitBowl"
+            width={1000}
+            height={1000}
+            className="lg:w-96 lg:h-96 md:w-[18rem] md:h-[18rem] object-contain hidden md:block"
+          />
+        </motion.div>
       </div>
+
       <div className="relative bg-PRIMARY w-full md:w-1/2 px-10 flex items-center md:items-start justify-center flex-col gap-5 py-10 md:py-0 ">
+        <motion.div
+          className="absolute top-0 h-[20px] bg-white w-full -left-0  md:hidden "
+          initial={{ x: "-100%" }}
+          animate={{ x: "0%" }}
+          transition={{
+            duration: 1.5,
+            ease: "easeInOut",
+          }}
+        ></motion.div>
         <div className="z-10">
           <h1 className="text-7xl lg:text-8xl md:text-6xl font-bold text-SECONDARY">
             Green

@@ -23,14 +23,7 @@ const Box_comp = ({ icons, title, paragraph, variants, transition, Containercont
       <div>
         <p className="text-gray-950">{paragraph}</p>
       </div>
-      <div>
-        <button className="mt-6 flex items-center gap-2 p-2 text-sm  transition-colors  text-black">
-          Learn more
-          <div className="group-hover:translate-x-1 transition-transform">
-            <MoveRight />
-          </div>
-        </button>
-      </div>
+    
     </motion.div>
   );
 };

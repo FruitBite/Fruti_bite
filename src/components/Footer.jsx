@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Facebook, Instagram } from "lucide-react";
+import { Facebook, Instagram  } from "lucide-react";
 import Image from "next/image";
 
 const Footer = () => {
@@ -83,12 +83,13 @@ const Footer = () => {
             WhatsApp: <span className="font-bold">+91 9945322622</span>
           </p>
           <p className="text-sm mt-2">
-            Email: <span className="font-bold">fruitbites@gmail.com</span>
+            Email: <span className="font-bold">fruitbite2025@gmail.com</span>
           </p>
           <p className="text-sm mt-2">
             Address:{" "}
             <span className="font-bold">
-              Chikkaap road, Beng District, Karnataka
+              Sy.119, Doddathoguru, Electronics City Phase 1, Electronic City,
+              Bengaluru, Karnataka 560100{" "}
             </span>
           </p>
         </div>

@@ -30,8 +30,8 @@ const Plans = () => {
     stiffness: 146,
     damping: 42,
     mass: 1.7,
-    velocity: 5
-};
+    velocity: 5,
+  };
 
   return (
     <div
@@ -55,6 +55,32 @@ const Plans = () => {
           height={500}
           className="w-56 absolute -top-16 left-0 md:left-10"
         />
+
+        {/* <div>
+          hi
+        </div> */}
+        {/* 
+        <motion.div
+          className="w-56 absolute -top-10 left-0 md:left-10"
+          animate={{
+            y: [0, -10, 0],
+          }}
+          transition={{
+            duration: 1.5,
+            delay: 1,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        >
+          <Image
+            src="/Orange.png"
+            alt="Orange"
+            width={500}
+            height={0}
+            className="w-20 bg-white p-2 rounded-full"
+          />
+        </motion.div> */}
+
         <div className="py-10 mt-16 md:mt-0">
           <div className="text-white relative">
             <Image
@@ -78,25 +104,30 @@ const Plans = () => {
               <motion.div
                 key={index}
                 variants={{
-                  visible: { opacity: 1, scale: 1,y:0 },  
-                  hidden: { opacity: 0, scale: 0,y:100 },  
+                  visible: { opacity: 1, scale: 1, y: 0 },
+                  hidden: { opacity: 0, scale: 0, y: 100 },
                 }}
                 initial="hidden"
                 animate={planControls}
-                transition={{ duration: 0.5, delay: 0.2*index,  type: "spring", }}
-                className="w-72 h-96 rounded-lg md:w-96 md:h-96 px-5 bg-white/25 text-black flex justify-center gap-6 flex-col"
+                transition={{
+                  duration: 0.5,
+                  delay: 0.2 * index,
+                  type: "spring",
+                }}
+                className="w-72 h-96 rounded-xl md:w-96 md:h-96 px-5 bg-white/25 text-black flex justify-center gap-6 flex-col"
               >
                 <div>
-                  <h1 className="text-3xl font-bold">{item.title}</h1>
-                  <p className="text-sm text-black">{item.value}</p>
+                  <h1 className="text-4xl font-bold">{item.title}</h1>
+                  <p className="text-lg text-black">{item.value}</p>
                 </div>
                 <div>
-                  <span className="text-3xl font-bold">₹{item.price}</span>/month
+                  <span className="text-3xl font-bold">₹{item.price}</span>
+                  /month
                 </div>
                 <ul className="flex flex-col gap-2">
                   {item.items.map((giveitems, index) => {
                     return (
-                      <li className="flex gap-2" key={index}>
+                      <li className="flex gap-2 text-lg" key={index}>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"
@@ -119,7 +150,7 @@ const Plans = () => {
                 </ul>
                 <a
                   href="#contact"
-                  className="bg-SECONDARY/70 hover:bg-SECONDARY text-white p-2 rounded-full text-center font-semibold text-xs"
+                  className="bg-SECONDARY/70 hover:bg-SECONDARY text-white p-2 rounded-full text-center font-semibold text-md"
                 >
                   Get Started
                 </a>
