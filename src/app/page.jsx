@@ -7,7 +7,7 @@ import HighlightsSection from "@/components/Home/HighlightsSection";
 import Howwedo from "@/components/Home/Howwedo";
 import Plans from "@/components/Home/Plans";
 import Subscribe from "@/components/Home/Subscribe";
-import Testimonial from "@/components/Home/Testimonial";
+// import Testimonial from "@/components/Home/Testimonial";
 import Navbar from "@/components/Navbar";
 import React from "react";
 
@@ -39,9 +39,9 @@ const page = () => {
       <section>
         <HighlightsSection />
       </section>
-      <section>
+{/*       <section>
         <Testimonial />
-      </section>
+      </section> */}
       <Footer />
     </div>
   );
