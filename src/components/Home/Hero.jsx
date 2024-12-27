@@ -149,13 +149,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <Image
-        src="/FruitBowl.png"
-        alt="Fruit bowl"
-        width={1000}
-        height={0}
-        className="w-72 md:w-96 p-1 bg-white rounded-full md:hidden animate-spin-slow"
-      />
+   
     </motion.div>
   );
 };
