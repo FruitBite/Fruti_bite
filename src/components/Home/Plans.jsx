@@ -35,7 +35,7 @@ const Plans = () => {
 
   return (
     <div
-      className=" w-full h-fit md:h-screen flex flex-col gap-10 items-center bg-PRIMARY relative  md:pb-0"
+      className=" w-full h-fit md:h-[90vh] flex flex-col gap-10 items-center bg-PRIMARY relative  md:pb-0"
       ref={planref}
     >
       <motion.div

@@ -9,24 +9,21 @@ export const collections = [
     id: 2,
     plan: "Veggies",
     title: "Veggies",
-    image: "/Collections/collection2.jpg",
+    image: "/Collections/veggies.jpg",
   },
   {
     id: 3,
     plan: "Sprouts",
     title: "Sprouts",
-    image: "/Collections/collection1.jpg",
+    image: "/Collections/sprouts.jpg",
   },
+
   {
     id: 4,
-    plan:"Dry Fruits",
+    plan: "Dry Fruits",
     title: "Dry Fruits",
-    image: "/Collections/collection4.jpg",
+    image: "/Collections/dryfruits.webp",
   },
 ];
 
-
-export const collection_names= ["ALL","Fruits","Veggies","Sprouts"]
-
-
-
+export const collection_names = ["ALL", "Fruits", "Veggies", "Sprouts"];

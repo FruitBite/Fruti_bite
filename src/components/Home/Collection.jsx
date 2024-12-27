@@ -45,7 +45,7 @@ const Collection = () => {
       ? collections
       : collections.filter((item) => item.plan === activeTab);
   return (
-    <div className="bg-white flex items-center justify-center flex-col gap-24 pb-20 mt-5 md:mt-0">
+    <div className="bg-white flex items-center justify-center flex-col gap-24 pb-20 mt-5 md:mt-20">
       <div>
         <div className="text-gray-400 relative">
           <Image

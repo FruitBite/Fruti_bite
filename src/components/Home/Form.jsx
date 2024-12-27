@@ -163,13 +163,13 @@ const Form = () => {
           <div className="flex items-center justify-center py-5 gap-3">
             <a
               href="tel:9945322622"
-              className="bg-PRIMARY rounded-full px-3 py-2 shadow-md shadow-PRIMARY/10"
+              className="bg-PRIMARY rounded-full px-3 py-2 shadow-md shadow-PRIMARY/10 text-xl"
             >
               Call Us
             </a>
             <a
               href="https://wa.me/9945322622"
-              className="bg-white rounded-full px-3 py-2 shadow-md shadow-black/10"
+              className="bg-white rounded-full px-3 py-2 shadow-md shadow-black/10 text-xl "
             >
               For Chat
             </a>
