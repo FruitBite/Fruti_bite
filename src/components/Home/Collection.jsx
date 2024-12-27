@@ -25,7 +25,6 @@
 
 // export default Collection;
 
-
 "use client";
 
 import Image from "next/image";
@@ -62,7 +61,7 @@ const Collection = () => {
         </h1>
       </div>
 
-      <div className="flex gap-4 ">
+      <div className="flex gap-4 flex-wrap max-md:px-10 max-md:justify-center">
         {collection_names.map((name) => (
           <button
             key={name}

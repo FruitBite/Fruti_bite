@@ -26,4 +26,4 @@ export const collections = [
   },
 ];
 
-export const collection_names = ["ALL", "Fruits", "Veggies", "Sprouts"];
+export const collection_names = ["ALL", "Fruits", "Veggies", "Sprouts","Dry Fruits"];
