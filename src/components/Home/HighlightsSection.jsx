@@ -28,7 +28,7 @@ const HighlightsSection = () => {
   const items = [
     { icons: <HeartPulse />, title: "100%", paragraph: "Healthy" },
     { icons: <Star />, title: "4.9", paragraph: "Average Rating" },
-    { icons: <Clock />, title: "Before 9AM", paragraph: "Daily one box" },
+    { icons: <Clock />, title: "Before 10 AM and 7 PM", paragraph: "Daily one box" },
     {
       icons: <ShieldCheck />,
       title: "Holiday",

@@ -17,7 +17,7 @@ const Mobile_navbar = () => {
 
   return (
     <>
-      <div className="relative w-full flex justify-between items-center p-4">
+      <div className="relative w-full flex justify-between items-center">
         <div className="flex gap-0">
           {/* <Image
             src="/logo.webp"
@@ -30,7 +30,7 @@ const Mobile_navbar = () => {
           <Image
             src="/Logo.png"
             alt="Fruit Bite Logo"
-            width={250}
+            width={190}
             height={50}
             className="px-4 py-2"
             priority

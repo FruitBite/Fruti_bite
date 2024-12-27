@@ -39,7 +39,7 @@ const Howwedo = () => {
       icons: <Truck />,
       title: "Fast Delivery",
       paragraph:
-        "Every day Morning delivery before 9 AM. All days Stay Healthy with Fruit Bite.",
+        "Every day morning delivery between 7 to 10 AM and evening delivery between 4 to 7 PM. Stay healthy with Fruit Bite!",
     },
     {
       icons: <Box />,
@@ -59,7 +59,7 @@ const Howwedo = () => {
       transition={{ duration: 0.5 }}
     >
       <motion.div
-        className="absolute md:-top-20 md:left-20 -bottom-20 left-10"
+        className="absolute md:-bottom-20 md:left-64 -bottom-20 left-10"
         variants={ImageVariants}
         animate={Containercontorl}
         transition={{
@@ -68,11 +68,11 @@ const Howwedo = () => {
         }}
       >
         <Image
-          src="/vegetable.png"
-          alt="vegetable"
+          src="/howwedo.png"
+          alt="howwedo"
           width={1000}
           height={100}
-          className="w-[60rem]"
+          className="w-[48rem]"
         />
       </motion.div>
 

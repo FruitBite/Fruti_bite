@@ -24,7 +24,7 @@ const Hero = () => {
       animate={Herocontrols}
       className="bg-PRIMARY flex items-center justify-center flex-col md:flex-row relative w-full md:bg-white "
     >
-      <div className="w-full flex  justify-center h-[90vh] md:w-1/2 flex-col px-10 leading-loose gap-2">
+      <div className="w-full flex  justify-center py-10 md:h-[90vh] md:w-1/2 flex-col px-10 leading-loose gap-2">
         <motion.h1
           className="text-7xl md:text-6xl lg:text-8xl font-bold text-white md:text-PRIMARY"
           variants={{
@@ -74,7 +74,7 @@ const Hero = () => {
           <Button text={"View Plans"} style={"primary"} link={"#plans"} />
         </motion.div>
         <motion.div
-          className="block md:hidden"
+          className="block md:hidden mt-2"
           variants={{
             visible: { opacity: 1, y: 0 },
             hidden: { opacity: 0, y: 100 },
@@ -83,7 +83,7 @@ const Hero = () => {
           animate={heroInview ? "visible" : "hidden"}
           transition={{ delay: 0.8, type: "spring" }}
         >
-          <Button text={"View Plans"} style={"secondary"} />
+          <Button text={"View Plans"} style={"secondary"} link={"#plans"}/>
         </motion.div>
       </div>
       <div className="hidden md:block  absolute bg-white p-2 rounded-full md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2">

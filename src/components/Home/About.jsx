@@ -17,7 +17,7 @@ const About = () => {
   }, [aboutInview, aboutcontrols]);
   return (
     <motion.div
-      className="w-full md:h-[90vh] flex md:flex-row flex-col"
+      className=" w-full md:h-[80vh] flex md:flex-row flex-col"
       ref={aboutcontainer}
       variants={variants}
       initial="hidden"
@@ -35,7 +35,7 @@ const About = () => {
           }}
         >
           <Image
-            src="/FruitBasket.png"
+            src="/fruit-basket.png"
             alt="FruitBowl"
             width={1000}
             height={1000}
@@ -95,7 +95,7 @@ const About = () => {
           animate={aboutInview ? "visible" : "hidden"}
           transition={{ delay: 0.8, type: "spring" }}
         >
-          <Button text={"View More"} style={"secondary"} link={"#"} />
+          <Button text={"View More"} style={"secondary"} link={"#plans"} />
         </motion.div>
         <motion.div
           animate={{
@@ -107,7 +107,7 @@ const About = () => {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="w-full justify-end flex"
+          className="absolute -bottom-10 right-0 "
         >
           <Image
             src="/Orange.png"

@@ -35,11 +35,11 @@ const Plans = () => {
 
   return (
     <div
-      className=" w-full h-fit md:h-screen flex flex-col gap-10 items-center bg-PRIMARY relative pb-20 md:pb-0"
+      className=" w-full h-fit md:h-screen flex flex-col gap-10 items-center bg-PRIMARY relative  md:pb-0"
       ref={planref}
     >
       <motion.div
-        className="w-full h-fit flex flex-col gap-10 items-center bg-PRIMARY relative pb-20 md:pb-0"
+        className="w-full h-fit flex flex-col gap-10 items-center bg-PRIMARY relative pb-10 md:pb-0"
         variants={{
           visible: { opacity: 1, y: 0 },
           hidden: { opacity: 0, y: 100 },
@@ -49,23 +49,13 @@ const Plans = () => {
         transition={transition}
       >
         <motion.div
-          className="w-56 absolute -top-16 left-0 md:left-10"
-          animate={{
-            y: [0, -5, 0],
-          }}
-          transition={{
-            duration: 1.5,
-            delay: 1,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        >
+          className="w-32 md:w-56 absolute -top-16 left-0 md:left-10 bg-white rounded-full">
           <Image
-            src="/Nuts.png"
+            src="/dry-fruits.png"
             alt="Nuts"
             width={500}
             height={500}
-            className="w-full object-cover"
+            className="w-full object-cover animate-spin-slow"
           />
         </motion.div>
 

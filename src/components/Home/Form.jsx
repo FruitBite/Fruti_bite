@@ -171,7 +171,7 @@ const Form = () => {
               href="https://wa.me/9945322622"
               className="bg-white rounded-full px-3 py-2 shadow-md shadow-black/10"
             >
-              Lets Chat
+              For Chat
             </a>
           </div>
         </motion.div>

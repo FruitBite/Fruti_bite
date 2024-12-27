@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Facebook, Instagram  } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -21,12 +21,12 @@ const Footer = () => {
           </div>
           <p className="mt-2 italic">where you meet a healthier you!</p>
           <p className="mt-4 text-sm leading-relaxed">
-            At Fruit Bites, we believe that a healthy start to your day sets the
-            tone for a vibrant life. Our mission is to deliver freshly cut
-            fruits, crunchy nuts, nutritious dry fruits, sprouts, boiled items,
-            and vegetables right to your doorstep. We ensure hygiene and quality
-            at every step to offer you a convenient, delicious, and nutritious
-            breakfast.
+            At Fruit Bites, we believe that starting your day with a healthy
+            meal paves the way for a vibrant lifestyle. Our mission is to
+            deliver freshly cut fruits, crunchy nuts, nutritious dry fruits,
+            sprouts, boiled items, and fresh vegetables to your doorstep. With a
+            focus on hygiene and quality, we make enjoying a convenient and
+            wholesome breakfast effortless.
           </p>
         </div>
 
