@@ -1,83 +1,86 @@
+
 "use client";
-import React, { useEffect, useRef } from "react";
-import { motion, useAnimation, useInView } from "framer-motion";
-import Box_comp from "../Box_comp";
-import { Box, Truck, Leaf } from "lucide-react";
+import React, { useRef, useEffect } from "react";
+import HSBox from "../HSBox";
+import { HeartPulse, Star, Clock, ShieldCheck } from "lucide-react";
+import { motion, useInView, useAnimation } from "framer-motion";
 import Image from "next/image";
 
-const Howwedo = () => {
+const HighlightsSection = () => {
   const baseVariants = {
     visible: { x: 0, opacity: 1 },
     initial: { x: -100, opacity: 0 },
-  };
-  const ImageVariants = {
-    visible: { y: 0, opacity: 1 },
-    initial: { y: 100, opacity: 0 },
   };
   const ContainerVariants = {
     visible: { y: 0, opacity: 1 },
     initial: { y: -100, opacity: 0 },
   };
-  const Containerref = useRef(null);
-  const isInview = useInView(Containerref);
-  const Containercontorl = useAnimation();
-  const Mainconainercontorl = useAnimation();
+  const HSref = useRef(null);
+  const isInview = useInView(HSref);
+  const HScontorl = useAnimation();
+  const HSconainercontorl = useAnimation();
 
   useEffect(() => {
-    Containercontorl.start(isInview ? "visible" : "initial");
-    Mainconainercontorl.start(isInview ? "visible" : "initial");
-  }, [isInview, Containercontorl, Mainconainercontorl]);
+    console.log(isInview);
+    HScontorl.start(isInview ? "visible" : "initial");
+    HSconainercontorl.start(isInview ? "visible" : "initial");
+  }, [isInview, HScontorl, HSconainercontorl]);
 
   const items = [
+    { icons: <HeartPulse />, title: "100%", paragraph: "Healthy" },
+    { icons: <Star />, title: "4.9", paragraph: "Average Rating" },
     {
-      icons: <Leaf />,
-      title: "100% Natural",
-      paragraph: "All our fruit plans are Healthy and tasty",
+      icons: <Clock />,
+      title: " Daily one box",
+      paragraph: Monday - Saturday | Timings Morning - 7 to 10 am | Evening - 4 to 7 pm,
     },
     {
-      icons: <Truck />,
-      title: "Fast Delivery",
-      paragraph:
-        " Monday - Saturday  Timings | Morning - 7 to 10 am | Evening - 4 to 7 pm Healthy Habits Start Here ",
-    },
-    {
-      icons: <Box />,
-      title: "Hygiene Boxes",
-      paragraph:
-        "We make sure to provide the Hygienic boxes daily for better Health.",
+      icons: <ShieldCheck />,
+      title: "Holiday",
+      paragraph: "Sunday & Festivals holiday ",
     },
   ];
 
   return (
     <motion.div
-      className="bg-PRIMARY w-full px-10 py-20 relative"
-      ref={Containerref}
-      variants={Mainconainercontorl}
+      className="py-20 w-full bg-PRIMARY md:px-20 px-10 relative"
+      ref={HSref}
+      variants={ContainerVariants}
       initial="initial"
-      animate={ContainerVariants}
+      animate={HSconainercontorl}
       transition={{ duration: 0.5 }}
     >
       <motion.div
-        className="absolute md:-bottom-20 md:left-64 -bottom-20 left-10"
-        variants={ImageVariants}
-        animate={Containercontorl}
+        className="absolute -top-10 left-0"
+        animate={{
+          y: [0, -5, 0],
+        }}
         transition={{
-          type: "spring",
-          stiffness: 30,
+          duration: 1.5,
+          delay: 1,
+          repeat: Infinity,
+          ease: "easeInOut",
         }}
       >
-        <Image
-          src="/howwedo.png"
-          alt="howwedo"
-          width={1000}
-          height={100}
-          className="w-[48rem]"
-        />
+        <Image src="/vitk.png" alt="vitk" width={100} height={0} />
       </motion.div>
-
-      <div className="grid md:grid-cols-3 gap-8 z-10 relative">
+      <motion.div
+        className="absolute -bottom-10 right-0"
+        animate={{
+          y: [0, -5, 0],
+        }}
+        transition={{
+          duration: 1.5,
+          delay: 1,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      >
+        <Image src="/vitE.png" alt="vitk" width={100} height={0} />
+      </motion.div>
+      <div className="text-center grid grid-cols-1 md:grid-cols-4 gap-8">
         {items.map((item, index) => (
-          <Box_comp
+          <HSBox
             key={index}
             icons={item.icons}
             title={item.title}
@@ -88,7 +91,7 @@ const Howwedo = () => {
               stiffness: 50,
               delay: 0.2 * index,
             }}
-            Containercontorl={Containercontorl}
+            animation={HScontorl}
           />
         ))}
       </div>
@@ -96,4 +99,4 @@ const Howwedo = () => {
   );
 };
 
-export default Howwedo;
+export default HighlightsSection;
