@@ -84,7 +84,7 @@ const About = () => {
           animate={aboutInview ? "visible" : "hidden"}
           transition={{ delay: 0.7, type: "spring" }}
         >
-          We believe in the power of natural foods to transform lives!
+          Boost Your Health and Wellbeing with our Nature's Candy
         </motion.p>
         <motion.div
           variants={{

@@ -28,11 +28,17 @@ const HighlightsSection = () => {
   const items = [
     { icons: <HeartPulse />, title: "100%", paragraph: "Healthy" },
     { icons: <Star />, title: "4.9", paragraph: "Average Rating" },
-    { icons: <Clock />, title: "Before 10 AM and 7 PM", paragraph: "Daily one box" },
+    {
+      icons: <Clock />,
+      title: " Daily one box",
+      paragraph: `Monday - Saturday  Timings
+  Morning - 7 to 10 am \n
+  Evening - 4 to 7 pm`,
+    },
     {
       icons: <ShieldCheck />,
       title: "Holiday",
-      paragraph: "Sunday Holiday, Festivals and leaves will be carry forwarded",
+      paragraph: "Sunday & Festivals holiday ",
     },
   ];
 
@@ -45,26 +51,32 @@ const HighlightsSection = () => {
       animate={HSconainercontorl}
       transition={{ duration: 0.5 }}
     >
-      <motion.div className="absolute -top-10 left-0"  animate={{
-        y: [0, -5, 0], 
-      }}
-      transition={{
-        duration: 1.5, 
-        delay:1,
-        repeat: Infinity, 
-        ease: "easeInOut", 
-      }}>
+      <motion.div
+        className="absolute -top-10 left-0"
+        animate={{
+          y: [0, -5, 0],
+        }}
+        transition={{
+          duration: 1.5,
+          delay: 1,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      >
         <Image src="/vitk.png" alt="vitk" width={100} height={0} />
       </motion.div>
-      <motion.div className="absolute -bottom-10 right-0"  animate={{
-        y: [0, -5, 0], 
-      }}
-      transition={{
-        duration: 1.5, 
-        delay:1,
-        repeat: Infinity, 
-        ease: "easeInOut", 
-      }}>
+      <motion.div
+        className="absolute -bottom-10 right-0"
+        animate={{
+          y: [0, -5, 0],
+        }}
+        transition={{
+          duration: 1.5,
+          delay: 1,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      >
         <Image src="/vitE.png" alt="vitk" width={100} height={0} />
       </motion.div>
       <div className="text-center grid grid-cols-1 md:grid-cols-4 gap-8">

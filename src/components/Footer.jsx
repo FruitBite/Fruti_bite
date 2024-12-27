@@ -2,14 +2,14 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Facebook, Instagram } from "lucide-react";
+import { Instagram, MessageCircleMore } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
   return (
     <motion.footer
-      className="bg-PRIMARY text-green-100 p-8"
+      className="bg-PRIMARY text-green-100 p-8 mt-20"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
@@ -19,7 +19,26 @@ const Footer = () => {
           <div className="flex items-center space-x-3">
             <Image src="/Logo.png" alt="logo" width={200} height={100} />
           </div>
-          <p className="mt-2 italic">where you meet a healthier you!</p>
+          <p className="mt-2 italic">Healthy Habits Start here</p>
+          {/* Social Icons */}
+          <div className="flex mt-2 space-x-4">
+            <Link
+              href="https://www.instagram.com/fruitbit_e?igsh=ZThlNmh5dGE0dW90"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-black hover:text-SECONDARY transition-all"
+              aria-label="Instagram"
+            >
+              <Instagram size={28} />
+            </Link>
+            <Link
+              href="https://wa.me/9945322622"
+              className="text-black hover:text-SECONDARY transition-all"
+              aria-label="Chat"
+            >
+              <MessageCircleMore size={28} />
+            </Link>
+          </div>
           <p className="mt-4 text-sm leading-relaxed">
             At Fruit Bites, we believe that starting your day with a healthy
             meal paves the way for a vibrant lifestyle. Our mission is to

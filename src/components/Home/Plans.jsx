@@ -35,11 +35,11 @@ const Plans = () => {
 
   return (
     <div
-      className=" w-full h-fit md:h-full flex flex-col gap-10 items-center bg-PRIMARY relative"
+      className=" w-full h-fit md:h-full flex flex-col gap-10 items-center bg-PRIMARY relative  md:pb-10"
       ref={planref}
     >
       <motion.div
-        className="w-full h-fit md:h-full flex flex-col gap-10 items-center bg-PRIMARY relative pb-10"
+        className="w-full h-fit flex flex-col gap-10 items-center bg-PRIMARY relative pb-10 md:pb-0"
         variants={{
           visible: { opacity: 1, y: 0 },
           hidden: { opacity: 0, y: 100 },
@@ -48,8 +48,7 @@ const Plans = () => {
         animate={mainControls}
         transition={transition}
       >
-        <motion.div
-          className="w-32 md:w-56 absolute -top-16 left-0 md:left-10 bg-white rounded-full">
+        <motion.div className="w-32 md:w-56 absolute -top-16 left-0 md:left-10 bg-white rounded-full">
           <Image
             src="/dry-fruits.png"
             alt="Nuts"
@@ -121,7 +120,7 @@ const Plans = () => {
                   delay: 0.2 * index,
                   type: "spring",
                 }}
-                className="w-72 h-96 rounded-xl md:w-96 md:h-96 px-5 bg-white/25 text-black flex justify-center gap-6 flex-col"
+                className="w-72  rounded-xl md:w-96 h-[26rem] px-5 bg-white/25 text-black flex justify-center gap-6 flex-col"
               >
                 <div>
                   <h1 className="text-4xl font-bold">{item.title}</h1>
@@ -132,6 +131,24 @@ const Plans = () => {
                   /month
                 </div>
                 <ul className="flex flex-col gap-2">
+                  <p className="text-xl flex items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="lucide lucide-check w-7 h-7 text-SECONDARY flex-shrink-0 font-semibold"
+                      aria-hidden="true"
+                    >
+                      <path d="M20 6 9 17l-5-5"></path>
+                    </svg>{ '\u00A0\u00A0'}
+                    {item.count}
+                  </p>
                   {item.items.map((giveitems, index) => {
                     return (
                       <li className="flex gap-2 text-lg" key={index}>

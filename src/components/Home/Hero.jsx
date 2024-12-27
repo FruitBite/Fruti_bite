@@ -51,7 +51,7 @@ const Hero = () => {
           Habits
         </motion.h1>
         <motion.p
-          className="text-xl md:w-2/3 lg:text-3xl"
+          className="text-3xl md:w-2/3 lg:text-3xl"
           variants={{
             visible: { opacity: 1, y: 0 },
             hidden: { opacity: 0, y: 100 },
@@ -60,7 +60,7 @@ const Hero = () => {
           animate={heroInview ? "visible" : "hidden"}
           transition={{ delay: 0.7, type: "spring" }}
         >
-          Starts Here
+          Start Here
         </motion.p>
         <motion.div
           className="hidden md:block md:mt-5"
@@ -128,7 +128,7 @@ const Hero = () => {
               transition={{ delay: 1, type: "spring" }}
             >
               <Link href="https://www.instagram.com/fruitbit_e?igsh=ZThlNmh5dGE0dW90">
-                {" "}
+              
                 <Instagram />
               </Link>
             </motion.div>

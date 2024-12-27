@@ -22,12 +22,11 @@ const Howwedo = () => {
   const isInview = useInView(Containerref);
   const Containercontorl = useAnimation();
   const Mainconainercontorl = useAnimation();
-  
 
   useEffect(() => {
     Containercontorl.start(isInview ? "visible" : "initial");
     Mainconainercontorl.start(isInview ? "visible" : "initial");
-  }, [isInview, Containercontorl,Mainconainercontorl]);
+  }, [isInview, Containercontorl, Mainconainercontorl]);
 
   const items = [
     {
@@ -39,7 +38,7 @@ const Howwedo = () => {
       icons: <Truck />,
       title: "Fast Delivery",
       paragraph:
-        "Every day morning delivery between 7 to 10 AM and evening delivery between 4 to 7 PM. Stay healthy with Fruit Bite!",
+        " Monday - Saturday  Timings | Morning - 7 to 10 am | Evening - 4 to 7 pm Healthy Habits Start Here ",
     },
     {
       icons: <Box />,
