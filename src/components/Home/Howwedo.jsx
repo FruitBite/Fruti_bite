@@ -37,8 +37,7 @@ const Howwedo = () => {
     {
       icons: <Truck />,
       title: "Fast Delivery",
-      paragraph:
-        " Monday - Saturday Timings | Morning - 7 to 10 am | Evening - 4 to 7 pm Healthy Habits Start Here ",
+      paragraph: " Monday - Saturday Timings | Morning - 7 to 10 am | Evening - 4 to 7 pm Healthy Habits Start Here ",
     },
     {
       icons: <Box />,
