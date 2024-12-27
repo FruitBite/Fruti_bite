@@ -31,7 +31,7 @@ const HighlightsSection = () => {
     {
       icons: <Clock />,
       title: " Daily one box",
-      paragraph: Monday - Saturday | Timings Morning - 7 to 10 am | Evening - 4 to 7 pm,
+      paragraph:" Monday - Saturday | Timings Morning - 7 to 10 am | Evening - 4 to 7 pm",
     },
     {
       icons: <ShieldCheck />,
