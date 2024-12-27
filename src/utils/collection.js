@@ -23,12 +23,6 @@ export const collections = [
     title: "Dry Fruits",
     image: "/Collections/collection4.jpg",
   },
-  {
-    id: 5,
-    plan: "Fruits",
-    title: "Fruits",
-    image: "/Collections/collection3.jpg",
-  },
 ];
 
 
