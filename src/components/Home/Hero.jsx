@@ -4,6 +4,7 @@ import Button from "../Button";
 import Image from "next/image";
 import { Instagram, MessageCircleMore, X } from "lucide-react";
 import { motion, useInView, useAnimation } from "framer-motion";
+import Link from "next/link";
 
 const Hero = () => {
   const herocontainer = useRef(null);
@@ -83,7 +84,7 @@ const Hero = () => {
           animate={heroInview ? "visible" : "hidden"}
           transition={{ delay: 0.8, type: "spring" }}
         >
-          <Button text={"View Plans"} style={"secondary"} link={"#plans"}/>
+          <Button text={"View Plans"} style={"secondary"} link={"#plans"} />
         </motion.div>
       </div>
       <div className="hidden md:block  absolute bg-white p-2 rounded-full md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
@@ -126,7 +127,10 @@ const Hero = () => {
               animate={heroInview ? "visible" : "hidden"}
               transition={{ delay: 1, type: "spring" }}
             >
-              <Instagram />
+              <Link href="https://www.instagram.com/fruitbit_e?igsh=ZThlNmh5dGE0dW90">
+                {" "}
+                <Instagram />
+              </Link>
             </motion.div>
             <motion.div
               className="rounded-full bg-white p-2 w-fit"
@@ -138,19 +142,9 @@ const Hero = () => {
               animate={heroInview ? "visible" : "hidden"}
               transition={{ delay: 1.2, type: "spring" }}
             >
-              <MessageCircleMore />
-            </motion.div>
-            <motion.div
-              className="rounded-full bg-white p-2 w-fit"
-              variants={{
-                visible: { opacity: 1, scale: 1 },
-                hidden: { opacity: 0, scale: 0 },
-              }}
-              initial="hidden"
-              animate={heroInview ? "visible" : "hidden"}
-              transition={{ delay: 1.3, type: "spring" }}
-            >
-              <X />
+              <Link href="https://wa.me/9945322622">
+                <MessageCircleMore />
+              </Link>
             </motion.div>
           </div>
         </div>

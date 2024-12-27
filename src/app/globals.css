@@ -12,3 +12,11 @@
 body {
   font-family:"Poppins", sans-serif;
 }
+
+.swiper-pagination-bullet {
+  background-color: #ffbb12 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ffbb12 !important;
+}
