@@ -35,11 +35,11 @@ const Plans = () => {
 
   return (
     <div
-      className=" w-full h-fit md:h-[90vh] flex flex-col gap-10 items-center bg-PRIMARY relative  md:pb-0"
+      className=" w-full h-fit md:h-full flex flex-col gap-10 items-center bg-PRIMARY relative"
       ref={planref}
     >
       <motion.div
-        className="w-full h-fit flex flex-col gap-10 items-center bg-PRIMARY relative pb-10 md:pb-0"
+        className="w-full h-fit md:h-full flex flex-col gap-10 items-center bg-PRIMARY relative pb-10"
         variants={{
           visible: { opacity: 1, y: 0 },
           hidden: { opacity: 0, y: 100 },
