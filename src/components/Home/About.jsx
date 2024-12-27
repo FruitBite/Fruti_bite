@@ -39,7 +39,7 @@ const About = () => {
             alt="FruitBowl"
             width={1000}
             height={1000}
-            className="lg:w-96 lg:h-96 md:w-[18rem] md:h-[18rem] object-contain hidden md:block"
+            className="lg:w-96 lg:h-96 md:w-[18rem] md:h-[18rem] object-contain hidden md:block scale-125"
           />
         </motion.div>
       </div>
