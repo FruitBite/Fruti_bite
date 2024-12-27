@@ -9,7 +9,7 @@ export const collections = [
     id: 2,
     plan: "Veggies",
     title: "Veggies",
-    image: "/Collections/veggies.jpg",
+    image: "/Collections/veggies3.jpg",
   },
   {
     id: 3,
