@@ -84,7 +84,7 @@ const About = () => {
           animate={aboutInview ? "visible" : "hidden"}
           transition={{ delay: 0.7, type: "spring" }}
         >
-          Boost Your Health and Wellbeing with our Nature&apos;s Candy
+          Boost Your Health and Well-being with our Nature&apos;s Candy
         </motion.p>
         <motion.div
           variants={{
