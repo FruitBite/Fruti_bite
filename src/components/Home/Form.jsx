@@ -171,7 +171,7 @@ const Form = () => {
               href="https://wa.me/9945322622"
               className="bg-white rounded-full px-3 py-2 shadow-md shadow-black/10 text-xl "
             >
-              For Chat
+              Chat with Us
             </a>
           </div>
         </motion.div>
@@ -209,4 +209,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default Form;
