@@ -12,6 +12,21 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      const offset = window.innerHeight * 0.15; // 20vh offset
+      const topPosition =
+        section.getBoundingClientRect().top + window.scrollY - offset;
+
+      window.scrollTo({
+        top: topPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <div
       className={`sticky top-0 left-0 w-full md:flex justify-between items-center z-50 transition-all ${
@@ -48,21 +63,36 @@ const Navbar = () => {
         )}
 
         <ul className="flex gap-10 px-5 py-4 ">
-          <a href="#home" className="font-semibold z-10">
+          <li
+            onClick={() => scrollToSection("home")}
+            className="font-semibold z-10 cursor-pointer"
+          >
             Home
-          </a>
-          <a href="#plans" className="font-semibold z-10">
+          </li>
+          <li
+            onClick={() => scrollToSection("plans")}
+            className="font-semibold z-10 cursor-pointer"
+          >
             Plans
-          </a>
-          <a href="#collections" className="font-semibold z-10">
+          </li>
+          <li
+            onClick={() => scrollToSection("collections")}
+            className="font-semibold z-10 cursor-pointer"
+          >
             Collections
-          </a>
-          <a href="#about" className="font-semibold z-10">
+          </li>
+          <li
+            onClick={() => scrollToSection("about")}
+            className="font-semibold z-10 cursor-pointer"
+          >
             About Us
-          </a>
-          <a href="#contact" className="font-semibold z-10">
+          </li>
+          <li
+            onClick={() => scrollToSection("contact")}
+            className="font-semibold z-10 cursor-pointer"
+          >
             Contact
-          </a>
+          </li>
         </ul>
       </div>
       <div className="md:hidden w-full flex justify-between items-center z-50 transition-all bg-white py-2">
