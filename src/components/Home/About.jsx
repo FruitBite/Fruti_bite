@@ -84,8 +84,8 @@ const About = () => {
           animate={aboutInview ? "visible" : "hidden"}
           transition={{ delay: 0.7, type: "spring" }}
         >
-          Boost your health and well-being with Nature's Candy at Fruit Bite! We
-          believe in the power of fresh, wholesome snacks made from nature’s
+          Boost your health and well-being with Nature&apos;s Candy at Fruit Bite! We
+          believe in the power of fresh, wholesome snacks made from nature&apos;s
           finest ingredients. Our collection brings together the goodness of
           fruits, dry fruits, sprouts, and vegetables to create flavorful,
           nutrient-packed treats that fuel your body and satisfy your cravings.
