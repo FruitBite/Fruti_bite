@@ -17,7 +17,7 @@ const About = () => {
   }, [aboutInview, aboutcontrols]);
   return (
     <motion.div
-      className=" w-full md:h-[60vh] flex md:flex-row flex-col"
+      className=" w-full md:h-[65vh] flex md:flex-row flex-col"
       ref={aboutcontainer}
       variants={variants}
       initial="hidden"
