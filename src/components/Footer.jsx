@@ -36,7 +36,12 @@ const Footer = () => {
               className="text-black hover:text-SECONDARY transition-all"
               aria-label="Chat"
             >
-              <MessageCircleMore size={28} />
+              <Image
+                src="/whatsapp.svg"
+                alt="Fruit bowl"
+                width={28}
+                height={0}
+              />
             </Link>
           </div>
           <p className="mt-4 text-sm leading-relaxed">
