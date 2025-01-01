@@ -75,7 +75,7 @@ const About = () => {
           </motion.h1>
         </div>
         <motion.p
-          className="text-xl lg:text-xl md:text-base z-10"
+          className="text-xl lg:text-xl md:text-base z-10 mb-2 md:text-center text-justify"
           variants={{
             visible: { opacity: 1, y: 0 },
             hidden: { opacity: 0, y: 100 },
@@ -84,7 +84,11 @@ const About = () => {
           animate={aboutInview ? "visible" : "hidden"}
           transition={{ delay: 0.7, type: "spring" }}
         >
-          Boost Your Health and Well-being with our Nature&apos;s Candy
+          Boost your health and well-being with Nature's Candy at Fruit Bite! We
+          believe in the power of fresh, wholesome snacks made from nature’s
+          finest ingredients. Our collection brings together the goodness of
+          fruits, dry fruits, sprouts, and vegetables to create flavorful,
+          nutrient-packed treats that fuel your body and satisfy your cravings.
         </motion.p>
         <motion.div
           variants={{
