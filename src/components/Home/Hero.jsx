@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import Button from "../Button";
 import Image from "next/image";
-import { Instagram, MessageCircleMore, X } from "lucide-react";
+import { Instagram, MessageCircleMore } from "lucide-react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import Link from "next/link";
 
@@ -128,7 +128,6 @@ const Hero = () => {
               transition={{ delay: 1, type: "spring" }}
             >
               <Link href="https://www.instagram.com/fruitbit_e?igsh=ZThlNmh5dGE0dW90">
-              
                 <Instagram />
               </Link>
             </motion.div>
@@ -143,7 +142,12 @@ const Hero = () => {
               transition={{ delay: 1.2, type: "spring" }}
             >
               <Link href="https://wa.me/9945322622">
-                <MessageCircleMore />
+                <Image
+                  src="/whatsapp.svg"
+                  alt="Fruit bowl"
+                  width={25}
+                  height={0}
+                />
               </Link>
             </motion.div>
           </div>
