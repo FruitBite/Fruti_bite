@@ -14,16 +14,23 @@ const HighlightsSection = () => {
     visible: { y: 0, opacity: 1 },
     initial: { y: -100, opacity: 0 },
   };
+
   const HSref = useRef(null);
-  const isInview = useInView(HSref);
-  const HScontorl = useAnimation();
-  const HSconainercontorl = useAnimation();
+  const isInview = useInView(HSref, {
+    threshold: 0.2,
+    margin: "0px 0px -200px 0px",
+    once: true,
+  });
+
+  const HScontrol = useAnimation();
+  const HScontainercontrol = useAnimation();
 
   useEffect(() => {
-    console.log(isInview);
-    HScontorl.start(isInview ? "visible" : "initial");
-    HSconainercontorl.start(isInview ? "visible" : "initial");
-  }, [isInview, HScontorl, HSconainercontorl]);
+    if (isInview) {
+      HScontrol.start("visible");
+      HScontainercontrol.start("visible");
+    }
+  }, [isInview, HScontrol, HScontainercontrol]);
 
   const items = [
     { icons: <HeartPulse />, title: "100%", paragraph: "Healthy" },
@@ -31,7 +38,7 @@ const HighlightsSection = () => {
     {
       icons: <Clock />,
       title: " Daily one box",
-      paragraph:" Monday - Saturday | Timings Morning - 7 to 10 am | Evening - 4 to 7 pm",
+      paragraph: `Monday - Saturday | Timings Morning - 7 to 10 am | Evening - 4 to 7 pm`,
     },
     {
       icons: <ShieldCheck />,
@@ -46,11 +53,14 @@ const HighlightsSection = () => {
       ref={HSref}
       variants={ContainerVariants}
       initial="initial"
-      animate={HSconainercontorl}
-      transition={{ duration: 0.5 }}
+      animate={HScontainercontrol}
+      transition={{
+        duration: 0.5,
+        ease: "easeOut",
+      }}
     >
       <motion.div
-        className="absolute -top-10 left-0"
+        className="absolute -top-10 left-2"
         animate={{
           y: [0, -5, 0],
         }}
@@ -89,8 +99,9 @@ const HighlightsSection = () => {
               type: "spring",
               stiffness: 50,
               delay: 0.2 * index,
+              damping: 15,
             }}
-            animation={HScontorl}
+            animation={HScontrol}
           />
         ))}
       </div>
