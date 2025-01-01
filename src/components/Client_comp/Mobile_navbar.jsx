@@ -11,22 +11,31 @@ const Mobile_navbar = () => {
   const toggleMenu = () => {
     setIsClicked(!isClicked);
   };
+
   const closeMenu = () => {
     setIsClicked(false);
+  };
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      const offset = window.innerHeight * 0.2; // 20vh offset
+      const topPosition =
+        section.getBoundingClientRect().top + window.scrollY - offset;
+
+      window.scrollTo({
+        top: topPosition,
+        behavior: "smooth",
+      });
+
+      closeMenu(); // Close the menu after scrolling
+    }
   };
 
   return (
     <>
       <div className="relative w-full flex justify-between items-center">
         <div className="flex gap-0">
-          {/* <Image
-            src="/logo.webp"
-            alt="Fruit Bite Logo"
-            width={105}
-            height={50}
-            className=" px-2 py-2 "
-            priority
-          /> */}
           <Image
             src="/Logo.png"
             alt="Fruit Bite Logo"
@@ -82,26 +91,30 @@ const Mobile_navbar = () => {
             }}
             className="w-full flex flex-col gap-6 items-center justify-center "
           >
-            <a onClick={closeMenu} className="text-xl font-bold" href="#home">
+            <a
+              className="text-xl font-bold"
+              onClick={() => scrollToSection("home")}
+            >
               Home
             </a>
             <a onClick={closeMenu} className="text-xl font-bold" href="#plans">
               Plans
             </a>
             <a
-              onClick={closeMenu}
+              onClick={() => scrollToSection("collections")}
               className="text-xl font-bold"
-              href="#collections"
             >
               Collections
             </a>
-            <a onClick={closeMenu} className="text-xl font-bold" href="#about">
+            <a
+              onClick={() => scrollToSection("about")}
+              className="text-xl font-bold"
+            >
               About Us
             </a>
             <a
-              onClick={closeMenu}
+              onClick={() => scrollToSection("contact")}
               className="text-xl font-bold"
-              href="#contact"
             >
               Contact
             </a>
