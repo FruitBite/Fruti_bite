@@ -1,5 +1,19 @@
 export const Plan_name = [
   {
+    title: "Basic",
+    value: "Popular Choice",
+    price: 2299,
+    items: ["3 Fruits 🍍🍎🍓", "1 Vegetables 🥦", "1 Sprouts 🌱"],
+    count: "5 items 📦",
+  },
+   {
+    title: "Standard",
+    value: "Best value",
+    price: 2399,
+    items: ["4 Fruits 🍍🍎🍓🍇", "1 Vegetables 🥦", "1 Sprouts 🌱"],
+    count: "6 items 📦",
+  },
+  {
     title: "Silver",
     value: "Best value",
     price: 2799,
@@ -18,4 +32,5 @@ export const Plan_name = [
     ],
     count: "10 items 📦",
   },
+  
 ];
