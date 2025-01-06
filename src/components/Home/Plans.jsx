@@ -139,7 +139,7 @@ const Plans = () => {
                   /month
                 </div>
                 <ul className="flex flex-col gap-2">
-                  <p className="text-xl flex items-center">
+                  <p className="text-xl flex items-center font-bold">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
