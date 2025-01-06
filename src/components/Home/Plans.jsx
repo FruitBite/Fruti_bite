@@ -120,7 +120,7 @@ const Plans = () => {
                   delay: 0.2 * index,
                   type: "spring",
                 }}
-                className={`relative w-72  rounded-xl md:w-96 h-[26rem] px-5 bg-white/25 text-black flex justify-center gap-6 flex-col ${
+                className={`relative w-72 rounded-xl md:w-96 h-[30rem] md:h-[26rem] px-5 bg-white/25 text-black flex justify-center gap-6 flex-col ${
                   item.popular ? "border-2 border-white" : "border-none"
                 }`}
               >
