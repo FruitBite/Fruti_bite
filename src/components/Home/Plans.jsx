@@ -102,7 +102,7 @@ const Plans = () => {
         </div>
 
         <motion.div
-          className="flex gap-10 flex-wrap items-center justify-center"
+          className="grid grid-cols-1 md:grid-cols-2 gap-10"
           ref={plancont}
         >
           {Plan_name.map((item, index) => {
@@ -120,8 +120,16 @@ const Plans = () => {
                   delay: 0.2 * index,
                   type: "spring",
                 }}
-                className="w-72  rounded-xl md:w-96 h-[26rem] px-5 bg-white/25 text-black flex justify-center gap-6 flex-col"
+                className={`relative w-72  rounded-xl md:w-96 h-[26rem] px-5 bg-white/25 text-black flex justify-center gap-6 flex-col ${
+                  item.popular ? "border-2 border-white" : "border-none"
+                }`}
               >
+                {item.popular && (
+                  <div className="absolute transform -top-3 left-1/2 -translate-x-1/2 flex items-center justify-center text-white py-4 bg-SECONDARY w-32 h-7 rounded-md">
+                    POPULAR
+                  </div>
+                )}
+
                 <div>
                   <h1 className="text-4xl font-bold">{item.title}</h1>
                   <p className="text-lg text-black">{item.value}</p>
@@ -146,7 +154,8 @@ const Plans = () => {
                       aria-hidden="true"
                     >
                       <path d="M20 6 9 17l-5-5"></path>
-                    </svg>{ '\u00A0\u00A0'}
+                    </svg>
+                    {"\u00A0\u00A0"}
                     {item.count}
                   </p>
                   {item.items.map((giveitems, index) => {

@@ -5,6 +5,7 @@ export const Plan_name = [
     price: 2299,
     items: ["3 Fruits 🍍🍎🍓", "1 Vegetables 🥦", "1 Sprouts 🌱"],
     count: "5 items 📦",
+    popular:false,
   },
    {
     title: "Standard",
@@ -12,6 +13,7 @@ export const Plan_name = [
     price: 2399,
     items: ["4 Fruits 🍍🍎🍓🍇", "1 Vegetables 🥦", "1 Sprouts 🌱"],
     count: "6 items 📦",
+    popular:false,
   },
   {
     title: "Silver",
@@ -19,6 +21,7 @@ export const Plan_name = [
     price: 2799,
     items: ["5 Fruits 🍍🍎🍓🍇🍉", "2 Vegetables 🥦🥕", "1 Sprouts 🌱"],
     count: "8 items 📦",
+    popular:false,
   },
   {
     title: "Gold",
@@ -31,6 +34,7 @@ export const Plan_name = [
       "1 Sprouts 🌱",
     ],
     count: "10 items 📦",
+    popular:true,
   },
   
 ];
