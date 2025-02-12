@@ -109,7 +109,7 @@ const Form = () => {
             <h2 className="text-2xl font-semibold text-green-600 mb-2">
               Thank You for Submitting!
             </h2>
-            <p className="text-green-700">We'll get back to you soon.</p>
+            <p className="text-green-700">We&apos;ll get back to you soon.</p>
           </motion.div>
         ) : (
           <>
