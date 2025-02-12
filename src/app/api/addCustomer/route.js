@@ -7,13 +7,13 @@ const customerSchema = z.object({
   address: z.string().min(1, "Address is required"),
   area: z.string().min(1, "Area is required"),
   plan: z.string().min(1, "Plan is required"),
+  remarks: z.string().min(1, "Plan is required"),
 });
 
 export async function POST(req) {
   try {
-    const { userName, phoneNo, address, area, plan } = customerSchema.parse(
-      await req.json()
-    );
+    const { userName, phoneNo, address, area, plan, remarks } =
+      customerSchema.parse(await req.json());
 
     const newCustomer = await prisma.customer.create({
       data: {
@@ -22,6 +22,7 @@ export async function POST(req) {
         address,
         area,
         plan,
+        remarks,
       },
     });
 

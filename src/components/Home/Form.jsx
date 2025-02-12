@@ -17,6 +17,7 @@ const Form = () => {
     address: "",
     area: "",
     plan: "",
+    remarks: "",
   });
 
   const variants = {
@@ -62,6 +63,7 @@ const Form = () => {
           address: "",
           area: "",
           plan: "",
+          remarks: "",
         });
       } else {
         setSubmitError(true);
@@ -154,7 +156,7 @@ const Form = () => {
 
             <motion.form
               onSubmit={handleSubmit}
-              className="rounded-lg border-[.1rem] border-PRIMARY p-5 flex-col gap-5 md:w-1/2"
+              className=" rounded-lg border-[.1rem] border-PRIMARY p-5 flex-col gap-5 md:w-1/2"
               variants={variants}
               initial="hidden"
               animate={formControls}
@@ -226,13 +228,22 @@ const Form = () => {
                 <option value="Gold">Gold</option>
               </select>
 
-              <div className="mb-6 mt-2">
+              {/* <div className="mb-6 mt-2">
                 <iframe
                   className="w-full h-48 rounded-lg"
                   src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d7779.771348542994!2d77.64877300000002!3d12.85066!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDUxJzAyLjQiTiA3N8KwMzknMDQuOSJF!5e0!3m2!1sen!2sin!4v1735133907281!5m2!1sen!2sin"
                   loading="lazy"
                 ></iframe>
-              </div>
+              </div> */}
+
+              <textarea
+                name="remarks"
+                value={formData.remarks}
+                onChange={handleChange}
+                placeholder="Description"
+                required
+                className="border-gray-300 p-2 w-full text-black placeholder-gray-500 rounded-lg outline-none focus:ring-2 focus:ring-PRIMARY focus:border-transparent border-[.1rem] mb-4 pb-4"
+              ></textarea>
 
               <button
                 type="submit"

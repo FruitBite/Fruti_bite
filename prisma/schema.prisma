@@ -16,5 +16,5 @@ model Customer {
   plan          String
   date          DateTime @default(now())
   paymentStatus String   @default("")
-  remarks       String   @default("")
+  remarks       String  
 }

@@ -100,19 +100,19 @@ const Collection = () => {
           {filteredCollections.map((item) => (
             <SwiperSlide key={item.id} className="pb-12">
               <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div className="relative h-64">
+                <div className="relative h-[22rem]">
                   <Image
                     src={item.image}
                     alt={item.title}
                     fill
-                    className="object-cover"
-                  />
+                    className="object-cover rotate-[-180deg]"
+                  /> 
                 </div>
                 <div className="p-4">
-                  <h3 className="text-xl font-semibold text-gray-800">
-                    {item.title}
+                  <h3 className="text-xl font-semibold text-gray-800 text-center">
+                    {item.plan}
                   </h3>
-                  <p className="text-gray-600">{item.plan}</p>
+                  <p className="text-gray-600 text-center">{item.title}</p>
                 </div>
               </div>
             </SwiperSlide>
